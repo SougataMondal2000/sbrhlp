@@ -1,0 +1,1 @@
+export const navLinks = [{title:'Home', redirectTo: '#'},{title:'The SocioFare Awards', redirectTo: '#'},{title:'Blogs', redirectTo: '#'},{title:'Careers', redirectTo: '#'}]

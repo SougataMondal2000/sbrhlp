@@ -1,5 +1,9 @@
 import CustomCauseCard from "../components/CustomCauseCard";
 import { FaHeart } from "react-icons/fa";
+import { FaHandHoldingHeart } from "react-icons/fa";
+import { FaHandsHolding } from "react-icons/fa6";
+import { IoMdFemale } from "react-icons/io";
+import { causeContent } from "../constants/constants";
 
 const Causes = () => {
   return (
@@ -8,30 +12,21 @@ const Causes = () => {
         Our Causes
       </h3>
       <div className="flex justify-center items-center flex-wrap gap-4">
-        <CustomCauseCard
-          image={
-            "https://images.unsplash.com/photo-1491833167315-f2f6c7c5deab?q=80&w=2115&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          }
-          icon={FaHeart}
-          title="Elderly care"
-          description="Caring hearts, nurturing lives: Embracing seniors with dignity. Join us in making their golden years truly golden."
-        />
-        <CustomCauseCard
-          image={
-            "https://images.unsplash.com/photo-1491833167315-f2f6c7c5deab?q=80&w=2115&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          }
-          icon={FaHeart}
-          title="Elderly care"
-          description="Caring hearts, nurturing lives: Embracing seniors with dignity. Join us in making their golden years truly golden."
-        />
-        <CustomCauseCard
-          image={
-            "https://images.unsplash.com/photo-1491833167315-f2f6c7c5deab?q=80&w=2115&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          }
-          icon={FaHeart}
-          title="Elderly care"
-          description="Caring hearts, nurturing lives: Embracing seniors with dignity. Join us in making their golden years truly golden."
-        />
+        {causeContent.map((item: any, index) => (
+          <CustomCauseCard
+            image={item.image}
+            icon={
+              index === 0
+                ? FaHandHoldingHeart
+                : index === 1
+                ? FaHandsHolding
+                : IoMdFemale
+            }
+            title={item.title}
+            description={item.desc}
+            key={index}
+          />
+        ))}
       </div>
     </div>
   );

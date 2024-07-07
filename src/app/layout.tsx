@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={montserrat.className}>
         <Navbar />
         {children}
-        <div className="fixed bottom-6 right-6 z-50"><Button label="Donate" boxShadow={'none'}/></div>
+        <div className="fixed bottom-6 right-6 z-50"><Button label="Donate Us!" boxShadow={'none'}/></div>
         <Footer />
       </body>
     </html>

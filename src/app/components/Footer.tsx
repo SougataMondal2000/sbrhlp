@@ -1,6 +1,14 @@
-import React from "react";
-
+import { footerSocialLinks } from "../constants/constants";
+import { FaFacebook, FaTwitter, FaYoutube, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 const Footer = () => {
+  const iconMap = {
+    "facebook": <FaFacebook />,
+    "twitter": <FaTwitter />,
+    "youtube": <FaYoutube />,
+    "instagram": <FaInstagram />,
+    "linkedin": <FaLinkedin />,
+    "whatsapp": <FaWhatsapp />
+  };
   return (
     <footer className="bg-black text-white py-12 px-4 md:px-8">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 lg:mb-10 mb-4">
@@ -17,24 +25,13 @@ const Footer = () => {
             prohibition of discrimination.
           </p>
           <div className="flex space-x-2">
-            {[
-              "facebook",
-              "twitter",
-              "youtube",
-              "instagram",
-              "linkedin",
-              "whatsapp",
-            ].map((social) => (
+            {footerSocialLinks.map((social:any,index) => (
               <a
-                key={social}
+                key={index}
                 href={`#${social}`}
                 className="bg-white p-1 rounded"
               >
-                <img
-                  src={`/${social}-icon.png`}
-                  alt={social}
-                  className="w-6 h-6"
-                />
+                {iconMap[social]}
               </a>
             ))}
           </div>

@@ -13,7 +13,7 @@ const Awards = () => {
             radiant spotlight on excellence in Social Welfare. This
             distinguished Award is a grand celebration, an ode to the remarkable
             individuals and organizations, whose extraordinary dedication
-            illuminates society's path towards a brighter future.
+            illuminates society&apos;s path towards a brighter future.
           </h2>
           <Button label={"The Sociofare Awards"} boxShadow={"none"} />
         </div>

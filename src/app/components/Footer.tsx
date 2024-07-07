@@ -47,10 +47,11 @@ const Footer = () => {
           </h2>
           <ul className="space-y-2 text-sm">
             {[
-              "Terms and Conditions",
+      "Terms and Conditions",
+              "About",
               "Privacy Policy",
-              "Donate Us",
-              "Opt-out preferences",
+              "Disclaimer ",
+              "FAQ",
             ].map((link) => (
               <li key={link}>
                 <a href={`#${link}`}>{link}</a>

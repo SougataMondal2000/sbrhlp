@@ -31,7 +31,7 @@ const Footer = () => {
                 href={`#${social}`}
                 className="bg-white p-1 rounded"
               >
-                {iconMap[social]}
+                {iconMap[social.platform]}
               </a>
             ))}
           </div>

@@ -28,7 +28,7 @@ const Footer = () => {
             {footerSocialLinks.map((social:any,index) => (
               <a
                 key={index}
-                href={`#${social}`}
+                href={`#${social.platform}`}
                 className="bg-white p-1 rounded"
               >
                 {iconMap[social.platform]}

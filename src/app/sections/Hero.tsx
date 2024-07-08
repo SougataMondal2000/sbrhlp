@@ -19,8 +19,8 @@ const Hero = () => {
               alt="Sabri Helpage video"
               className="w-full h-full object-cover op"
             />
-            <div className="absolute inset-0  bg-opacity-85 text-black lg:p-8 lg:w-[900px] lg:h-[300px] md:p-8 md:w-[650px] md:h-[250px] w-[80%] h-fit py-2 my-auto mx-auto">
-              <h1 className="md:text-3xl text-2xl lg:text-8xl font-bold md:mb-4 mb-2 text-center text-[#FF7536] shadow-text">
+            <div className="absolute inset-0  bg-opacity-85 text-black lg:p-8 lg:w-[1000px] lg:h-[300px] md:p-8 md:w-[650px] md:h-[250px] w-[80%] h-fit py-2 my-auto mx-auto">
+              <h1 className="font-serif md:text-3xl text-2xl lg:text-8xl font-bold md:mb-4 mb-2 text-center text-[#FF7536] shadow-text">
                 SABRI HELPAGE
               </h1>
               <p className="lg:text-xl md:text-lg text-base text-center text-[#FF7536] shadow-text font-semibold">
@@ -36,7 +36,7 @@ const Hero = () => {
         </div>
         <div className="flex items-center justify-center lg:h-[550px] md:mt-24 md:mb-10">
           <div className="lg:w-[60%] md:w-[90%] w-[80%] mx-auto leading-6">
-            <h3 className="lg:text-5xl lg:mb-12 md:text-3xl text-2xl mb-6">
+            <h3 className="font-serif lg:text-6xl lg:mb-12 md:text-3xl text-2xl mb-2">
               Small acts, when multiplied by millions of people, can
               <span className="font-bold"> Transform the world !</span>
             </h3>

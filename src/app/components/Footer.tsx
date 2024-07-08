@@ -65,7 +65,7 @@ const Footer = () => {
               "FAQ",
             ].map((link) => (
               <li key={link}>
-                <a href={`#${link}`}>{link}</a>
+                <a href={link === "About" ? "/about-us" : `#${link}`}>{link}</a>
               </li>
             ))}
           </ul>

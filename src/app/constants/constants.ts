@@ -6,27 +6,27 @@ export const causeContent = [{title:'Elderly care', desc:'Caring hearts, nurturi
 
 export const footerSocialLinks = [
   {
-    "platform": "facebook",
-    "icon": "facebook-icon.png"
+    platform: "facebook",
+    
   },
   {
-    "platform": "twitter",
-    "icon": "twitter-icon.png"
+    platform: "twitter",
+    
   },
   {
-    "platform": "youtube",
-    "icon": "youtube-icon.png"
+    platform: "youtube",
+    
   },
   {
-    "platform": "instagram",
-    "icon": "instagram-icon.png"
+    platform: "instagram",
+    
   },
   {
-    "platform": "linkedin",
-    "icon": "linkedin-icon.png"
+    platform: "linkedin",
+    
   },
   {
-    "platform": "whatsapp",
-    "icon": "whatsapp-icon.png"
+    platform: "whatsapp",
+    
   }
 ]

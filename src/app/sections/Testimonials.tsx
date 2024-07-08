@@ -3,7 +3,7 @@ import TesttimonialCard from "../components/TesttimonialCard";
 const Testimonials = () => {
   return (
     <div className="bg-[#F8F5F4] pt-10">
-      <h3 className="lg:text-5xl lg:mb-12 md:text-3xl text-2xl mb-6 md:text-center font-semibold">
+      <h3 className="font-serif lg:text-5xl lg:mb-12 md:text-3xl text-2xl mb-6 md:text-center font-semibold">
         Well wishes from our Patrons
       </h3>
       <div

@@ -8,7 +8,7 @@ import { causeContent } from "../constants/constants";
 const Causes = () => {
   return (
     <div className="leading-6 lg:mx-4 md:m-2 m-4">
-      <h3 className="lg:text-5xl lg:mb-12 md:text-3xl text-2xl mb-6 md:text-center font-semibold">
+      <h3 className="font-serif lg:text-5xl lg:mb-12 md:text-3xl text-2xl mb-6 md:text-center font-semibold">
         Our Causes
       </h3>
       <div className="flex justify-center items-center flex-wrap gap-4">

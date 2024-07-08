@@ -37,7 +37,7 @@ const page = () => {
           <div className="md:w-1/2">
             <p className="mb-4 text-sm">
               Sabri Helpage, an NGO headquartered in Kolkata, exemplifies
-              unwavering dedication to the welfare of our society's most
+              unwavering dedication to the welfare of our society&apos;s most
               vulnerable. Their primary focus on elderly care demonstrates their
               commitment to providing support, compassion, and dignity to our
               seniors. In tandem, they champion mental health awareness,
@@ -46,7 +46,7 @@ const page = () => {
             </p>
 
             <p className="mb-4 text-sm">
-              Sabri Helpage's tireless efforts extend to the empowerment of
+              Sabri Helpage&apos;s tireless efforts extend to the empowerment of
               children and women, ensuring their rights are upheld and their
               potential is unleashed. Moreover, their recognition of individuals
               and organizations nationwide with the prestigious SocioFare Awards

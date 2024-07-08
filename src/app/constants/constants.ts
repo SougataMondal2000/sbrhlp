@@ -30,3 +30,10 @@ export const footerSocialLinks = [
     
   }
 ]
+
+
+export const awards = [
+  { date: '4th October, 20XX', title: 'Chamakta Aina', image: '/Chamkta_Aina_-1.webp' },
+  { date: '11th August, 2013', title: 'Sanmarg', image: '/Sanmarg__2021-1.webp' },
+  { date: '28th January, 2020', title: 'Narendra Modi Letter', image: '/Modi_Ji_letter-1-724x1024.webp' },
+];

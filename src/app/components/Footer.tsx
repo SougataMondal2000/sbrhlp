@@ -1,14 +1,16 @@
 import { footerSocialLinks } from "../constants/constants";
-import { FaFacebook, FaTwitter, FaYoutube, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import {
+  FaFacebook,
+  FaTwitter,
+  FaYoutube,
+  FaInstagram,
+  FaLinkedin,
+  FaWhatsapp,
+} from "react-icons/fa";
+import { FaPhone, FaLocationDot } from "react-icons/fa6";
+import { IoIosMail } from "react-icons/io";
+
 const Footer = () => {
-  const iconMap = {
-    "facebook": <FaFacebook />,
-    "twitter": <FaTwitter />,
-    "youtube": <FaYoutube />,
-    "instagram": <FaInstagram />,
-    "linkedin": <FaLinkedin />,
-    "whatsapp": <FaWhatsapp />
-  };
   return (
     <footer className="bg-black text-white py-12 px-4 md:px-8">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 lg:mb-10 mb-4">
@@ -25,13 +27,25 @@ const Footer = () => {
             prohibition of discrimination.
           </p>
           <div className="flex space-x-2">
-            {footerSocialLinks.map((social:any,index) => (
+            {footerSocialLinks.map((social: any, index) => (
               <a
                 key={index}
                 href={`#${social.platform}`}
-                className="bg-white p-1 rounded"
+                className="bg-white p-2 text-[#FF7536]"
               >
-                {iconMap[social.platform]}
+                {index === 0 ? (
+                  <FaFacebook />
+                ) : index === 1 ? (
+                  <FaTwitter />
+                ) : index === 2 ? (
+                  <FaYoutube />
+                ) : index === 3 ? (
+                  <FaInstagram />
+                ) : index === 4 ? (
+                  <FaLinkedin />
+                ) : (
+                  <FaWhatsapp />
+                )}
               </a>
             ))}
           </div>
@@ -44,7 +58,7 @@ const Footer = () => {
           </h2>
           <ul className="space-y-2 text-sm">
             {[
-      "Terms and Conditions",
+              "Terms and Conditions",
               "About",
               "Privacy Policy",
               "Disclaimer ",
@@ -88,29 +102,21 @@ const Footer = () => {
           <h2 className="text-[#FF6B35] text-xl font-semibold mb-4">
             Reach Us
           </h2>
-          <ul className="space-y-2 text-sm">
-            <li className="flex items-center">
-              <img src="/phone-icon.png" alt="Phone" className="w-4 h-4 mr-2" />
+          <ul className="space-y-4 text-sm">
+            <li className="flex items-center gap-2">
+              <FaPhone className="w-4 h-4" />
               033-4601 3886
             </li>
-            <li className="flex items-center">
-              <img src="/email-icon.png" alt="Email" className="w-4 h-4 mr-2" />
+            <li className="flex items-center gap-2">
+              <IoIosMail className="w-4 h-4" />
               support@sabrihelpage.org
             </li>
-            <li className="flex items-center">
-              <img
-                src="/whatsapp-icon.png"
-                alt="WhatsApp"
-                className="w-4 h-4 mr-2"
-              />
+            <li className="flex items-center gap-2">
+              <FaWhatsapp className="w-4 h-4" />
               +919674536860
             </li>
-            <li className="flex items-start">
-              <img
-                src="/location-icon.png"
-                alt="Location"
-                className="w-4 h-4 mr-2 mt-1"
-              />
+            <li className="flex items-start gap-2">
+              <FaLocationDot className="w-4 h-4" />
               7B, Mysore Road, Rashbehari Avenue, Kolkata 700026
             </li>
           </ul>

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 import Button from "../components/Button";
+import Joinus from "../sections/Joinus";
 
 interface Post {
   id: number;
@@ -20,7 +21,7 @@ const Blog: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get("https://api.npoint.io/13000386040ac65c98de")
+      .get("https://api.npoint.io/27bd2b47d8fce22655ed")
       .then((response) => {
         setPosts(response.data);
         setRecentPosts(response.data.slice(0, 2));
@@ -158,26 +159,7 @@ const Blog: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Above Footer Banner */}
-        <div className="relative h-[400px] flex items-center justify-center">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: "url('/your_image_path.png')",
-            }}
-          ></div>
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="relative text-center text-white lg:w-[60%] md:w-[90%] w-[80%]">
-            <p className="text-xl lg:text-4xl mb-4">
-              Be a catalyst for positive change
-            </p>
-            <div className="flex justify-center gap-4">
-              <Button label="BE OUR PARTNER" boxShadow={"none"} />
-              <Button label="JOIN OUR CAUSE" boxShadow={"none"} />
-            </div>
-          </div>
-        </div>
+        <Joinus />
       </main>
     </div>
   );

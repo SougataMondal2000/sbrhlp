@@ -20,11 +20,8 @@ const Navbar = () => {
         <div className="max-md:hidden">
           <ul className="flex justify-between items-center lg:gap-6 gap-4">
             {navLinks.map((item: any, index) => (
-              <Link href={item.redirectTo}>
-                <li
-                  key={index}
-                  className="text-[#A4988C] font-semibold cursor-pointer hover:border-b hover:border-[#FF7536] lg:text-base md:text-sm"
-                >
+              <Link href={item.redirectTo} key={index}>
+                <li className="text-[#A4988C] font-semibold cursor-pointer hover:border-b hover:border-[#FF7536] lg:text-base md:text-sm">
                   {item.title}
                 </li>
               </Link>

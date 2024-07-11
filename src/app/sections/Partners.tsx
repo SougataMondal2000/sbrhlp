@@ -24,7 +24,7 @@ const Partners = () => {
           OUR PARTNERS
         </h3>
         <div className="flex md:gap-10 gap-2 justify-center items-center">
-          {partnerIcons.map((item, index) => (
+          {partnerIcons.map((item: any, index) => (
             <div
               key={index}
               className="rounded-md flex justify-center items-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"

@@ -77,7 +77,7 @@ const page = () => {
         </h1>
         <div className="relative">
           <div className="flex space-x-6 md:justify-center overflow-x-auto pb-8">
-            {awards.map((award, index) => (
+            {awards.map((award: any, index) => (
               <div key={index} className="flex-none w-72">
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                   <img

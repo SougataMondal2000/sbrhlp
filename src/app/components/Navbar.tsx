@@ -2,6 +2,7 @@ import Image from "next/image";
 import Button from "./Button";
 import { navLinks } from "../constants/constants";
 import { RxHamburgerMenu } from "react-icons/rx";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -19,12 +20,14 @@ const Navbar = () => {
         <div className="max-md:hidden">
           <ul className="flex justify-between items-center lg:gap-6 gap-4">
             {navLinks.map((item: any, index) => (
-              <li
-                key={index}
-                className="text-[#A4988C] font-semibold cursor-pointer hover:border-b hover:border-[#FF7536] lg:text-base md:text-sm"
-              >
-                {item.title}
-              </li>
+              <Link href={item.redirectTo}>
+                <li
+                  key={index}
+                  className="text-[#A4988C] font-semibold cursor-pointer hover:border-b hover:border-[#FF7536] lg:text-base md:text-sm"
+                >
+                  {item.title}
+                </li>
+              </Link>
             ))}
           </ul>
         </div>

@@ -62,10 +62,10 @@ const Blog: React.FC = () => {
             <div className="mb-8">
               <h2 className="text-4xl font-light mb-4">Recent Posts</h2>
               <ul>
-                {recentPosts.map((post) => (
-                  <li key={post.id} className="mb-2">
+                {recentPosts.map((post, index) => (
+                  <li key={index} className="mb-2">
                     <Link
-                      href={`/blog/${post.id}`}
+                      href={`#`}
                       className="text-orange-500 hover:underline"
                     >
                       {post.title}
@@ -134,8 +134,8 @@ const Blog: React.FC = () => {
             </div>
 
             <div className="mb-8">
-              {posts.map((post) => (
-                <div key={post.id} className="flex mb-4">
+              {posts.map((post, index) => (
+                <div key={index} className="flex mb-4">
                   <img
                     src={"/Educating_Children.webp"}
                     alt={post.title}

@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Button from "./components/Button";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const font = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Sabri Helpage",
@@ -19,10 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
+      <body className={font.className}>
         <Navbar />
         {children}
-        <div className="fixed bottom-6 right-6 z-50"><Button label="Donate Us!" boxShadow={'none'}/></div>
+        <div className="fixed bottom-6 right-6 z-50">
+          <Button label="Donate Us!" boxShadow={"none"} />
+        </div>
         <Footer />
       </body>
     </html>

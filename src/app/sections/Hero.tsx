@@ -1,6 +1,14 @@
+"use client";
+import { useState } from "react";
 import Button from "../components/Button";
 
 const Hero = () => {
+  const [isEnglishVisible, setIsEnglishVisible] = useState(false);
+
+  const handleToggle = () => {
+    setIsEnglishVisible(!isEnglishVisible);
+  };
+
   return (
     <div className="relative">
       <div
@@ -28,9 +36,14 @@ const Hero = () => {
               </p>
             </div>
           </section>
-          <div className="bg-[#FF7536] mx-4 rounded-md py-4 lg:shadow-2xl md:shadow-xl shadow-lg absolute bottom-[-50px] left-0 right-0">
+          <div
+            className="bg-[#FF7536] mx-4 rounded-md py-4 lg:shadow-2xl md:shadow-xl shadow-lg absolute bottom-[-50px] left-0 right-0"
+            onClick={handleToggle}
+            onMouseEnter={handleToggle}
+            onMouseLeave={handleToggle}
+          >
             <p className="text-center text-white lg:text-4xl md:text-2xl text-xl">
-              May all be happy!
+              {isEnglishVisible ? "May all be happy" : "सर्वे भवन्तु सुखिन"}
             </p>
           </div>
         </div>

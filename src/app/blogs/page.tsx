@@ -75,8 +75,19 @@ const Blog: React.FC = () => {
             </button>
           </div>
         </div>
-
-        <div className="flex flex-col lg:flex-row mx-4 py-8">
+        <div className="flex justify-center items-center w-full gap-2">
+          {posts.map((item, index) => (
+            <div
+              key={index}
+              className="w-4 h-4 border-2 border-gray-400 rounded-full mt-2 flex items-center justify-center"
+            >
+              {index === currentIndex && (
+                <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="lg:w-[70%] lg:mx-auto flex flex-col lg:flex-row mx-4 py-8">
           {/* Left Sidebar */}
           <div className="w-full lg:w-1/4 p-4 mb-8 lg:mb-0">
             <div className="mb-8">

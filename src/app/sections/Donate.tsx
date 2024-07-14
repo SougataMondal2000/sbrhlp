@@ -13,7 +13,7 @@ const Donate = () => {
       <div className="absolute inset-0 bg-black opacity-30"></div>
       <div className="relative text-center text-white px-4 lg:w-[60%] md:w-[90%] w-[80%]">
         <p className="text-xl lg:text-4xl lg:mb-14 mb-8">
-          Changing lives, one act of kindness at a time
+          Your donation makes a difference.
         </p>
         <div className="flex justify-center gap-10 items-center">
           <Button label={"Donate"} boxShadow={"none"} />

@@ -4,7 +4,7 @@ import Donate from "../sections/Donate";
 import Joinus from "../sections/Joinus";
 import { awards } from "../constants/constants";
 
-const page = () => {
+const page: React.FC = () => {
   return (
     <main className="bg-[#F8F5F4]">
       <div className="w-full lg:h-[650px] md:h-[500px] h-[400px] overflow-hidden">

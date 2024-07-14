@@ -8,8 +8,10 @@ import Button from "./components/Button";
 const font = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sabri Helpage",
-  description: "Sabri Helpage",
+  title:
+    "NGO India | Charity in India | Elderly or senior care, non – profit organisation – sabri helpage.",
+  description:
+    "Sabri Helpage – An NGO in India working for elderly care, children and women welfare and Mental Health Care Awareness.",
 };
 
 export default function RootLayout({

@@ -1,12 +1,12 @@
-import { footerSocialLinks } from "../constants/constants";
+import { footerSocialLinks, quickLinks } from "../constants/constants";
 import {
   FaFacebook,
-  FaTwitter,
   FaYoutube,
   FaInstagram,
   FaLinkedin,
   FaWhatsapp,
 } from "react-icons/fa";
+import { PiXLogoDuotone } from "react-icons/pi";
 import { FaPhone, FaLocationDot } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 
@@ -30,13 +30,14 @@ const Footer = () => {
             {footerSocialLinks.map((social: any, index) => (
               <a
                 key={index}
-                href={`#${social.platform}`}
+                href={social.redirectTo}
                 className="bg-white p-2 text-[#FF7536]"
+                target="_blank"
               >
                 {index === 0 ? (
                   <FaFacebook />
                 ) : index === 1 ? (
-                  <FaTwitter />
+                  <PiXLogoDuotone />
                 ) : index === 2 ? (
                   <FaYoutube />
                 ) : index === 3 ? (
@@ -57,15 +58,9 @@ const Footer = () => {
             Quick Links
           </h2>
           <ul className="space-y-2 text-sm">
-            {[
-              "Terms and Conditions",
-              "About",
-              "Privacy Policy",
-              "Disclaimer ",
-              "FAQ",
-            ].map((link) => (
-              <li key={link}>
-                <a href={link === "About" ? "/about-us" : `#${link}`}>{link}</a>
+            {quickLinks.map((item: any, index) => (
+              <li key={item}>
+                <a href={item.redirectTo}>{item.title}</a>
               </li>
             ))}
           </ul>
@@ -105,11 +100,21 @@ const Footer = () => {
           <ul className="space-y-4 text-sm">
             <li className="flex items-center gap-2">
               <FaPhone className="w-4 h-4" />
-              033-4601 3886
+              <a
+                href="tel:033-4601-3886"
+                className="ml-2 text-white hover:underline"
+              >
+                033-4601 3886
+              </a>
             </li>
             <li className="flex items-center gap-2">
               <IoIosMail className="w-4 h-4" />
-              support@sabrihelpage.org
+              <a
+                href="mailto:support@sabrihelpage.org"
+                className="ml-2  hover:underline"
+              >
+                support@sabrihelpage.org
+              </a>
             </li>
             <li className="flex items-center gap-2">
               <FaWhatsapp className="w-4 h-4" />
@@ -117,7 +122,13 @@ const Footer = () => {
             </li>
             <li className="flex items-start gap-2">
               <FaLocationDot className="w-4 h-4" />
-              7B, Mysore Road, Rashbehari Avenue, Kolkata 700026
+              <a
+                href="https://maps.app.goo.gl/7udotxnnF8JPzYkr9"
+                className=" ml-2 hover:underline"
+                target="_blank"
+              >
+                7B, Mysore Road, Rashbehari Avenue, Kolkata 700026
+              </a>
             </li>
           </ul>
         </div>

@@ -21,25 +21,26 @@ const page: React.FC = () => {
             terms and conditions by publishing updates online. You agree to the
             updated terms of this agreement when you use this website after they
             are posted. You consent to using this website solely for legitimate
-            purposes and in a way that doesn't violate anyone else's rights or
-            prevent others from using or enjoying it.
+            purposes and in a way that doesn&apos;t violate anyone else&apos;s
+            rights or prevent others from using or enjoying it.
           </p>
           <p className="mb-4">
             This website and all of the content—including names, images, photos,
-            and logos—about or associated with Sabri Helpage are offered "as
-            is," with no endorsements or representations made, and without any
-            kind of implied or explicit warranty. Under no circumstances will
-            Sabri Helpage be responsible for any damages, including but not
-            limited to indirect or consequential damages, or any other damages
-            resulting from using the site, from loss of use thereof, or from any
-            other cause, whether through negligence or otherwise.
+            and logos—about or associated with Sabri Helpage are offered
+            &quot;as is,&quot; with no endorsements or representations made, and
+            without any kind of implied or explicit warranty. Under no
+            circumstances will Sabri Helpage be responsible for any damages,
+            including but not limited to indirect or consequential damages, or
+            any other damages resulting from using the site, from loss of use
+            thereof, or from any other cause, whether through negligence or
+            otherwise.
           </p>
           <p>
             Sabri Helpage disclaims any warranty regarding the accuracy,
             dependability, or uninterrupted operation of the functions contained
-            in the site's content, the correction of errors, the virus-free
+            in the site&apos;s content, the correction of errors, the virus-free
             status of the site and the server that hosts it, or the
-            representation of the content's complete functionality.
+            representation of the content&apos;s complete functionality.
           </p>
         </section>
 
@@ -116,6 +117,7 @@ const page: React.FC = () => {
           </p>
         </section>
       </div>
+
       <Joinus />
       <Partners />
       <Donate />

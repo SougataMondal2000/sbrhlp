@@ -110,6 +110,7 @@ const page: React.FC = () => {
           </ul>
         </section>
       </div>
+
       <Joinus />
       <Partners />
       <Donate />

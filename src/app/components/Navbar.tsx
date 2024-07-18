@@ -1,12 +1,21 @@
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import Button from "./Button";
 import { navLinks } from "../constants/constants";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Link from "next/link";
+import { MdOutlineArrowDropDown } from "react-icons/md";
 
 const Navbar = () => {
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const handleDropdownToggle = (index: any) => {
+    setActiveDropdown(activeDropdown === index ? null : index);
+  };
+
   return (
-    <nav className="lg:h-[150px] flex md:justify-around justify-between items-center p-4 shadow-2xl">
+    <nav className="lg:h-[150px] flex md:justify-around justify-between items-center p-4 shadow-2xl relative">
       <section>
         <Image
           width={350}
@@ -14,21 +23,52 @@ const Navbar = () => {
           src="/sabri_logo-_1_.webp"
           alt="Sabri Helpage Logo"
           className="lg:w-[350px] md:w-[200px] w-[150px]"
-        ></Image>
+        />
       </section>
       <section className="flex justify-between items-center lg:gap-16 md:gap-6">
         <div className="max-md:hidden">
           <ul className="flex justify-between items-center lg:gap-6 gap-4">
-            {navLinks.map((item: any, index) => (
-              <Link href={item.redirectTo} key={index}>
-                <li className="text-[#A4988C] font-semibold cursor-pointer hover:border-b hover:border-[#FF7536] lg:text-base md:text-sm">
-                  {item.title}
-                </li>
-              </Link>
+            {navLinks.map((item, index) => (
+              <li key={index} className="relative">
+                {item.dropdownItems ? (
+                  <div>
+                    <button
+                      onClick={() => handleDropdownToggle(index)}
+                      className="text-[#A4988C] font-semibold cursor-pointer hover:border-b hover:border-[#FF7536] lg:text-base md:text-sm flex items-center"
+                    >
+                      {item.title}
+                      <MdOutlineArrowDropDown />
+                    </button>
+                    {activeDropdown === index && (
+                      <ul className="absolute left-0 mt-2 bg-gray-700 text-white rounded-md shadow-lg z-50">
+                        {item.dropdownItems.map(
+                          (dropdownItem, dropdownIndex) => (
+                            <li key={dropdownIndex}>
+                              <Link href={dropdownItem.redirectTo}>
+                                <p className="block px-4 py-2 text-sm hover:bg-gray-600 first:rounded-t-md last:rounded-b-md">
+                                  {dropdownItem.title}
+                                </p>
+                              </Link>
+                            </li>
+                          )
+                        )}
+                      </ul>
+                    )}
+                  </div>
+                ) : (
+                  <Link href={item.redirectTo}>
+                    <p className="text-[#A4988C] font-semibold cursor-pointer hover:border-b hover:border-[#FF7536] lg:text-base md:text-sm">
+                      {item.title}
+                    </p>
+                  </Link>
+                )}
+              </li>
             ))}
           </ul>
         </div>
-        <Button label={"Donate Us"} boxShadow={"none"} />
+        <Link href="/donate">
+          <Button label="Donate Us!" boxShadow={"none"} />
+        </Link>
         <section className="md:hidden ml-4">
           <RxHamburgerMenu />
         </section>

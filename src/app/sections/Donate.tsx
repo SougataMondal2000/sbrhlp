@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Button from "../components/Button";
 
 const Donate = () => {
@@ -16,7 +17,9 @@ const Donate = () => {
           Your donation makes a difference.
         </p>
         <div className="flex justify-center gap-10 items-center">
-          <Button label={"Donate"} boxShadow={"none"} />
+          <Link href="/donate">
+            <Button label="Donate" boxShadow={"none"} />
+          </Link>
         </div>
       </div>
     </div>

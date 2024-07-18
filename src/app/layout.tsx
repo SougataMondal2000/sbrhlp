@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Button from "./components/Button";
+import Link from "next/link";
 
 const font = Montserrat({ subsets: ["latin"] });
 
@@ -25,7 +26,9 @@ export default function RootLayout({
         <Navbar />
         {children}
         <div className="fixed bottom-6 right-6 z-50">
-          <Button label="Donate Us!" boxShadow={"none"} />
+          <Link href="/donate">
+            <Button label="Donate Us!" boxShadow={"none"} />
+          </Link>
         </div>
         <Footer />
       </body>

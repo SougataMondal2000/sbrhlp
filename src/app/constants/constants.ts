@@ -31,7 +31,7 @@ export const navLinks = [
       { title: '2024', redirectTo: '/events/2024' }
     ]
   },
-  { title: 'Blog', redirectTo: '/blog' },
+  { title: 'Blog', redirectTo: '/blogs' },
   { 
     title: 'Internship', 
     redirectTo: '/internship',

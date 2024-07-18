@@ -30,8 +30,8 @@ export default function Opportunities() {
             <div className="lg:max-w-xl">
               <p className="text-gray-600 mb-4">
                 Internship at and with Helpage is a transformational learning
-                experience that will enable you to make a difference where it's
-                needed the most.
+                experience that will enable you to make a difference where
+                it&apos;s needed the most.
               </p>
               <Button label={"View Opportunities >"} boxShadow={"none"} />
             </div>
@@ -51,7 +51,7 @@ export default function Opportunities() {
               <p className="text-gray-600 mb-4">
                 Volunteering at Sabri Helpage is an experiential learning
                 opportunity that gives you the superpower to know your strength
-                and make a difference where it's needed the most.
+                and make a difference where it&apos;s needed the most.
               </p>
               <Button label={"View Opportunities >"} boxShadow={"none"} />
             </div>

@@ -6,7 +6,7 @@ import Button from "../components/Button";
 import Joinus from "../sections/Joinus";
 
 interface Post {
-  id: number;
+  _id: number;
   title: string;
   content: string;
   image: string;
@@ -16,10 +16,14 @@ interface Post {
 }
 
 const categories = [
-  "Elderly Care",
-  "Girl child and Women welfare",
-  "Mental Health Awareness",
-  "Real Life Heroes",
+  { name: "All Posts", value: "" },
+  { name: "Elderly Care", value: "Elderly Care" },
+  {
+    name: "Girl child and Women welfare",
+    value: "Girl child and Women welfare",
+  },
+  { name: "Mental Health Awareness", value: "Mental Health Awareness" },
+  { name: "Real Life Heroes", value: "Real Life Heroes" },
 ];
 
 const Blog: React.FC = () => {
@@ -79,8 +83,6 @@ const Blog: React.FC = () => {
     );
     setMainTitle(posts[currentIndex]?.title || "Default Title");
   };
-
-  console.log(category.replace(" ", "%20"), "raju");
 
   return (
     <div>
@@ -163,10 +165,10 @@ const Blog: React.FC = () => {
                 {categories.map((item, index) => (
                   <li key={index}>
                     <button
-                      onClick={() => handleChangeCategory(item)}
+                      onClick={() => handleChangeCategory(item.value)}
                       className="text-orange-500 hover:underline"
                     >
-                      {item}
+                      {item.name}
                     </button>
                   </li>
                 ))}
@@ -205,19 +207,17 @@ const Blog: React.FC = () => {
           {/* Main Content */}
           <div className="w-full lg:w-3/4 p-4">
             <div className="mb-4 flex flex-wrap">
-              <button
-                className="bg-orange-500 text-white px-4 py-2 rounded mr-2 mb-2 lg:mb-0"
-                onClick={() => handleChangeCategory("")}
-              >
-                All Posts
-              </button>
               {categories.map((item, index) => (
                 <button
-                  className="bg-orange-500 text-white px-4 py-2 rounded mr-2 mb-2 lg:mb-0"
-                  onClick={() => handleChangeCategory(item)}
+                  className={`${
+                    item.value === category
+                      ? "bg-orange-500 text-white px-4 py-2 rounded mr-2 mb-2 lg:mb-0 text-xs"
+                      : "border border-orange-500 text-orange-500 px-4 py-2 rounded mr-2 mb-2 lg:mb-0 hover:text-white hover:bg-orange-500 text-xs"
+                  }`}
+                  onClick={() => handleChangeCategory(item.value)}
                   key={index}
                 >
-                  {item}
+                  {item.name}
                 </button>
               ))}
             </div>
@@ -238,7 +238,7 @@ const Blog: React.FC = () => {
                           {post.content.substring(0, 100)}...
                         </p>
                         <Link
-                          href={`/blog/${post.id}`}
+                          href={`/blogs/${post._id}`}
                           className="text-orange-500 hover:underline"
                         >
                           Read More

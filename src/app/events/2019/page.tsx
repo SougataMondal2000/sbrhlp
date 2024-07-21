@@ -6,8 +6,8 @@ const events2019 = [
     tagline:
       "Sabri Helpage shared the gift of knowledge and time, enriching young lives at the Madarsa with educational essentials and heartwarming moments.",
     images: [
-      { url: "/madarsa1.png", type: "secondary" },
-      { url: "/madarsa2.png", type: "secondary" },
+      { url: "/madarsa1.png", type: "secondary" as "secondary" },
+      { url: "/madarsa2.png", type: "secondary" as "secondary" },
     ],
   },
   {
@@ -15,17 +15,17 @@ const events2019 = [
     tagline:
       "With educational treasures, their eyes would shine, In those joyful moments, a future so divine.",
     images: [
-      { url: "/madanpurmain.png", type: "main" },
-      { url: "/madanpur1.png", type: "secondary" },
-      { url: "/madanpur2.png", type: "secondary" },
-      { url: "/madanpur3.png", type: "secondary" },
+      { url: "/madanpurmain.png", type: "main" as "main" },
+      { url: "/madanpur1.png", type: "secondary" as "secondary" },
+      { url: "/madanpur2.png", type: "secondary" as "secondary" },
+      { url: "/madanpur3.png", type: "secondary" as "secondary" },
     ],
   },
   {
     title: "Warmth and Nourishment for Street Children",
     tagline:
       "Sabri Helpage's visit to Barasat was a reminder that compassion knows no boundaries, reaching out to provide not just snacks but a moment of hope to those who need it most.",
-    images: [{ url: "/barasat.png", type: "main" }],
+    images: [{ url: "/barasat.png", type: "main" as "main" }],
   },
 ];
 

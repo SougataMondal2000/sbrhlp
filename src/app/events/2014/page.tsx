@@ -6,9 +6,9 @@ const events2014 = [
     tagline:
       "Sabri Helpage's love, a bond so strong, made Mamoni's dreams take flight, where they belong.",
     images: [
-      { url: "/MamoniWedding.png", type: "main" },
-      { url: "/mamoni1.png", type: "secondary" },
-      { url: "/mamoni2.png", type: "secondary" },
+      { url: "/MamoniWedding.png", type: "main" as "main" },
+      { url: "/mamoni1.png", type: "secondary" as "secondary" },
+      { url: "/mamoni2.png", type: "secondary" as "secondary" },
     ],
   },
 ];

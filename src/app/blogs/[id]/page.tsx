@@ -70,7 +70,8 @@ const Page: React.FC = () => {
               </li>
               <li>
                 <a href="#" className="text-orange-500 hover:underline">
-                  Empowering Seniors: Sabri Helpage's life-changing services
+                  Empowering Seniors: Sabri Helpage&apos;s life-changing
+                  services
                 </a>
                 <p className="text-sm text-gray-500">October 5, 2023</p>
               </li>

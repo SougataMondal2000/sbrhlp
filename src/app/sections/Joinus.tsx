@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Button from "../components/Button";
 
 const Joinus = () => {
@@ -19,7 +20,9 @@ const Joinus = () => {
         </p>
         <div className="flex justify-center gap-10 items-center">
           <Button label={"Be a Partner"} boxShadow={"none"} />
-          <Button label={"Join Our Team"} boxShadow={"none"} />
+          <Link href="/joinus">
+            <Button label={"Join Our Team"} boxShadow={"none"} />
+          </Link>
         </div>
       </div>
     </div>

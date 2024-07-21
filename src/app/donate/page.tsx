@@ -1,11 +1,24 @@
 "use client";
+import axios from "axios";
+import React, { useState } from "react";
 
-import { useState } from "react";
-
-const Page: React.FC = () => {
+const DonationForm = () => {
   const [paymentSuccess, setPaymentSuccess] = useState(false);
   const [country, setCountry] = useState("India");
   const [donationAmount, setDonationAmount] = useState("0.00");
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    address1: "",
+    address2: "",
+    city: "",
+    state: "",
+    postalCode: "",
+    donationAmount: "",
+    // paymentMethod: "UPI",
+  });
 
   const loadScript = (src: string): Promise<boolean> => {
     return new Promise((resolve) => {
@@ -33,12 +46,33 @@ const Page: React.FC = () => {
         amount: Number(donationAmount) * 100,
         name: "Sabri Helpage",
         description: "Thanks for donating!",
-        handler: (response: { razorpay_payment_id: string }) => {
+        handler: async (response: { razorpay_payment_id: string }) => {
           setPaymentSuccess(true);
           console.log(response.razorpay_payment_id);
-        },
-        prefill: {
-          name: "Sabri Helpage",
+
+          // Send donation details to the backend
+          try {
+            await axios.post("http://localhost:5000/donate", {
+              ...formData,
+              donationAmount: donationAmount,
+            });
+            setFormData({
+              firstName: "",
+              lastName: "",
+              email: "",
+              phone: "",
+              address1: "",
+              address2: "",
+              city: "",
+              state: "",
+              postalCode: "",
+              donationAmount: "",
+              // paymentMethod: "UPI",
+            }),
+              setDonationAmount("0.00");
+          } catch (error) {
+            console.error("Error sending donation details:", error);
+          }
         },
       };
 
@@ -47,6 +81,11 @@ const Page: React.FC = () => {
     } catch (error) {
       console.error("Error displaying Razorpay:", error);
     }
+  };
+
+  const handleInputChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handlePayment = async () => {
@@ -75,12 +114,18 @@ const Page: React.FC = () => {
           <div className="grid grid-cols-2 gap-4">
             <input
               type="text"
+              name="firstName"
               placeholder="First"
+              value={formData.firstName}
+              onChange={handleInputChange}
               className="w-full p-2 border rounded"
             />
             <input
               type="text"
+              name="lastName"
               placeholder="Last"
+              value={formData.lastName}
+              onChange={handleInputChange}
               className="w-full p-2 border rounded"
             />
           </div>
@@ -94,7 +139,10 @@ const Page: React.FC = () => {
             <input
               type="email"
               id="email"
+              name="email"
               placeholder="Please Enter Your Email Address"
+              value={formData.email}
+              onChange={handleInputChange}
               className="w-full p-2 border rounded"
             />
           </div>
@@ -105,7 +153,10 @@ const Page: React.FC = () => {
             <input
               type="tel"
               id="phone"
+              name="phone"
               placeholder="Phone Number with Country Code"
+              value={formData.phone}
+              onChange={handleInputChange}
               className="w-full p-2 border rounded"
             />
           </div>
@@ -115,30 +166,45 @@ const Page: React.FC = () => {
           <label className="block text-sm font-medium mb-1">Address</label>
           <input
             type="text"
+            name="address1"
             placeholder="Address Line 1"
+            value={formData.address1}
+            onChange={handleInputChange}
             className="w-full p-2 border rounded mb-2"
           />
           <input
             type="text"
+            name="address2"
             placeholder="Address Line 2"
+            value={formData.address2}
+            onChange={handleInputChange}
             className="w-full p-2 border rounded mb-2"
           />
           <div className="grid grid-cols-2 gap-4 mb-2">
             <input
               type="text"
+              name="city"
               placeholder="City"
+              value={formData.city}
+              onChange={handleInputChange}
               className="w-full p-2 border rounded"
             />
             <input
               type="text"
+              name="state"
               placeholder="State / Province / Region"
+              value={formData.state}
+              onChange={handleInputChange}
               className="w-full p-2 border rounded"
             />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <input
               type="text"
+              name="postalCode"
               placeholder="Postal Code"
+              value={formData.postalCode}
+              onChange={handleInputChange}
               className="w-full p-2 border rounded"
             />
             <select
@@ -159,6 +225,7 @@ const Page: React.FC = () => {
           <input
             type="number"
             id="donation"
+            name="donationAmount"
             value={donationAmount}
             onChange={(e) => setDonationAmount(e.target.value)}
             step="0.01"
@@ -179,4 +246,4 @@ const Page: React.FC = () => {
   );
 };
 
-export default Page;
+export default DonationForm;

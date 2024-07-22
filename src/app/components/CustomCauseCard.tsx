@@ -1,12 +1,14 @@
 import React from "react";
 import Image from "/mnt/data/image.png"; // Adjust the path as needed
 import { IconType } from "react-icons";
+import Link from "next/link";
 
 interface CardProps {
   image: string;
   icon: IconType;
   title: string;
   description: string;
+  href: string;
 }
 
 const CustomCauseCard: React.FC<CardProps> = ({
@@ -14,6 +16,7 @@ const CustomCauseCard: React.FC<CardProps> = ({
   icon: Icon,
   title,
   description,
+  href,
 }) => {
   return (
     <div className="lg:w-[600px] lg:h-[430px] md:w-[350px] md:h-[470px] w-full h-[500px] rounded overflow-hidden shadow-sm relative ">
@@ -22,9 +25,11 @@ const CustomCauseCard: React.FC<CardProps> = ({
         <div className="cursor-pointer rounded-full bg-white w-fit h-fit p-[20px] mb-10">
           <Icon className="w-8 h-8" />
         </div>
-        <h2 className="text-[35px] font-semibold cursor-pointer text-white mb-10">
-          {title}
-        </h2>
+        <Link href={href}>
+          <h2 className="text-[35px] font-semibold cursor-pointer text-white mb-10">
+            {title}
+          </h2>
+        </Link>
         <p className="text-base text-white">{description}</p>
       </div>
     </div>

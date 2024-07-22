@@ -1,4 +1,5 @@
 "use client";
+import { baseURL } from "@/app/baseurl";
 import Button from "@/app/components/Button";
 import Donate from "@/app/sections/Donate";
 import axios from "axios";
@@ -49,7 +50,7 @@ const Page: React.FC = () => {
         }
       });
 
-      await axios.post("http://localhost:5000/internships", formDataToSend, {
+      await axios.post(`${baseURL}/internships`, formDataToSend, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

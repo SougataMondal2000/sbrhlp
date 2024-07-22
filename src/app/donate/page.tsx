@@ -1,6 +1,7 @@
 "use client";
 import axios from "axios";
 import React, { useState } from "react";
+import { baseURL } from "../baseurl";
 
 const DonationForm = () => {
   const [paymentSuccess, setPaymentSuccess] = useState(false);
@@ -52,7 +53,7 @@ const DonationForm = () => {
 
           // Send donation details to the backend
           try {
-            await axios.post("http://localhost:5000/donate", {
+            await axios.post(`${baseURL}/donate`, {
               ...formData,
               donationAmount: donationAmount,
             });

@@ -25,6 +25,7 @@ const Causes = () => {
             title={item.title}
             description={item.desc}
             key={index}
+            href={item.redirectTo}
           />
         ))}
       </div>

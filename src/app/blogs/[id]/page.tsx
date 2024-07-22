@@ -4,6 +4,7 @@ import axios from "axios";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { baseURL } from "@/app/baseurl";
 
 interface Post {
   _id: number;
@@ -23,7 +24,7 @@ const Page: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get<Post>(`http://localhost:5000/posts/${id}`);
+        const res = await axios.get<Post>(`${baseURL}/posts/${id}`);
         setPost(res.data);
       } catch (error) {
         console.error("Error fetching post:", error);

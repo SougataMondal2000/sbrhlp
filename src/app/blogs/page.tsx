@@ -4,6 +4,7 @@ import axios from "axios";
 import Link from "next/link";
 import Button from "../components/Button";
 import Joinus from "../sections/Joinus";
+import { baseURL } from "../baseurl";
 
 interface Post {
   _id: number;
@@ -44,7 +45,7 @@ const Blog: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/posts`)
+      .get(`${baseURL}/posts`)
       .then((response) => {
         setRecentPosts(response.data.slice(0, 2));
         setMainTitle(response.data[0]?.title || "Default Title");
@@ -57,7 +58,7 @@ const Blog: React.FC = () => {
   useEffect(() => {
     axios
       .get(
-        `http://localhost:5000/posts?category=${category.replace(
+        `${baseURL}/posts?category=${category.replace(
           " ",
           "%20"
         )}&title=${title}`

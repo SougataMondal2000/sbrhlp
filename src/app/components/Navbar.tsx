@@ -1,18 +1,25 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Button from "./Button";
 import { navLinks } from "../constants/constants";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Link from "next/link";
 import { MdOutlineArrowDropDown } from "react-icons/md";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
 
+  const pathName = usePathname();
+
   const handleDropdownToggle = (index: any) => {
     setActiveDropdown(activeDropdown === index ? null : index);
   };
+
+  useEffect(() => {
+    setActiveDropdown(null);
+  }, [pathName]);
 
   return (
     <nav className="lg:h-[150px] flex md:justify-around justify-between items-center p-4 shadow-2xl relative">

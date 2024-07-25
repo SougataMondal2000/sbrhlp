@@ -20,7 +20,7 @@ const Page: React.FC = () => {
 
       <div className="max-w-5xl mx-auto px-4 pt-8">
         <h1 className="lg:text-4xl md:text-2xl text-xl font-serif mb-8">
-          Sabri Helpage's The SocioFare: A Catalyst for Social Impact
+          Sabri Helpage&apos;s The SocioFare: A Catalyst for Social Impact
         </h1>
         <div className="flex flex-col md:flex-row gap-6">
           <div className="">

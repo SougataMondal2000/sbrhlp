@@ -67,7 +67,7 @@ const Footer = () => {
         </div>
 
         {/* Subscribe Section */}
-        <div>
+        {/* <div>
           <h2 className="text-[#FF6B35] text-xl font-semibold mb-4">
             Subscribe
           </h2>
@@ -90,7 +90,7 @@ const Footer = () => {
               Submit
             </button>
           </form>
-        </div>
+        </div> */}
 
         {/* Reach Us Section */}
         <div>

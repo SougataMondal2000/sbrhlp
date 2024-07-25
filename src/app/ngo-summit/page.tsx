@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import Partners from "../sections/Partners";
 import Donate from "../sections/Donate";
 import Joinus from "../sections/Joinus";
-import axios from "axios";
-import { baseURL } from "../baseurl";
 import RegistrationModal from "../components/RegistrationModal";
 
 const Page: React.FC = () => {
@@ -66,8 +64,9 @@ const Page: React.FC = () => {
 
         <p className="text-lg">
           <strong>Secure your spot now! </strong>
-          Don't miss this opportunity to be part of something extraordinary.
-          Register for the first step and embark on a transformative journey.
+          Don&apos;t miss this opportunity to be part of something
+          extraordinary. Register for the first step and embark on a
+          transformative journey.
         </p>
       </div>
       <div className="flex justify-center mt-4 lg:mb-20 mb-10">

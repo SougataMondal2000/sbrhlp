@@ -93,7 +93,7 @@ const Page: React.FC = () => {
               </li>
             </ul>
           </div>
-          <div className="bg-gray-100 p-6 rounded-lg">
+          {/* <div className="bg-gray-100 p-6 rounded-lg">
             <h2 className="text-3xl font-bold mb-4">Subscribe</h2>
             <form>
               <input
@@ -108,7 +108,7 @@ const Page: React.FC = () => {
                 Submit
               </button>
             </form>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

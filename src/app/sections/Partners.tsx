@@ -20,7 +20,7 @@ const Partners = () => {
         <h3 className="text-sm lg:mb-10 mb-2 font-light text-center">
           OUR PARTNERS
         </h3>
-        <div className="flex md:gap-10 gap-2 justify-center items-center">
+        <div className="flex md:gap-10 gap-2 justify-center items-center px-2">
           {partnerIcons.map((item: any, index) => (
             <div
               key={index}
@@ -29,7 +29,7 @@ const Partners = () => {
               <img
                 src={item.icon}
                 alt={`Partner ${index + 1}`}
-                className="w-[200px] h-[200px] object-contain"
+                className="w-[200px] md:h-[200px] h-[100px] object-contain "
               />
             </div>
           ))}

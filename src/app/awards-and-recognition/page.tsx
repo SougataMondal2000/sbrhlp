@@ -19,10 +19,10 @@ const page: React.FC = () => {
           Awards & Recognitions
         </h1>
         <h2 className="font-semibold md:mb-4 md-2">
-          Let's Expand on Sabri Helpage's Impactful Work While formal awards and
-          recognition are undoubtedly valuable, Sabri Helpage's greatest reward
-          lies in the tangible impact it creates in the lives of its
-          beneficiaries.
+          Let&apos;s Expand on Sabri Helpage&apos;s Impactful Work While formal
+          awards and recognition are undoubtedly valuable, Sabri Helpage&apos;s
+          greatest reward lies in the tangible impact it creates in the lives of
+          its beneficiaries.
         </h2>
         <p>
           The satisfaction, hope, and independence instilled in the elderly,

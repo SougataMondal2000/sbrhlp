@@ -153,7 +153,7 @@ const FrequentlyAskedQuestions: React.FC = () => {
         <h2 className="text-3xl font-bold mb-8 text-center">
           Frequently Asked Questions
         </h2>
-        <div className="max-w-[1000px] mx-auto">
+        <div className="max-w-[10                                                                                                                                                                                                                                                                                                                                           00px] mx-auto">
           {faqItems.map((item, index) => (
             <FAQItem
               key={index}

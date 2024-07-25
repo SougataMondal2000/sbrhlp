@@ -4,8 +4,9 @@ import Partners from "../sections/Partners";
 import Donate from "../sections/Donate";
 import Joinus from "../sections/Joinus";
 import PublicationsCarousel from "../components/PublicationsCarousal";
+import VideoGrid from "../components/VideoGrid";
 
-export const publications = [
+const publications = [
   {
     image: "/Arthik Lipi-14.5.24-pg-8.jpeg",
     title: "Arthik Lipi",
@@ -49,31 +50,34 @@ export const publications = [
   {
     image: "/Bartaman (Chotushporni)-18.5.24-Pg_02.jpeg",
     title: "Bartaman (Chotushporni)",
-    date: "-18.5.24",
+    date: "18.5.24",
   },
 ];
 
 const digitalPublications = [
   {
     image: "https://www.youtube.com/embed/4X3DZgpVn2c",
-    title: "",
+    title: "Video 1",
     date: "2023",
     isVideo: true,
   },
   {
-    image: "https://www.youtube.com/watch?v=Vj2ACOYEsFY",
+    image: "https://www.youtube.com/embed/Vj2ACOYEsFY",
     title: "Video 2",
     date: "2022",
+    isVideo: true,
   },
   {
-    image: "https://youtu.be/hreKdIFB2B0",
+    image: "https://www.youtube.com/embed/hreKdIFB2B0",
     title: "Video 3",
     date: "2021",
+    isVideo: true,
   },
   {
-    image: "https://youtu.be/XQ0mh9W8sMc",
-    title: "Video 3",
+    image: "https://www.youtube.com/embed/XQ0mh9W8sMc",
+    title: "Video 4",
     date: "2021",
+    isVideo: true,
   },
 ];
 
@@ -90,17 +94,19 @@ const Page: React.FC = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h1 className="font-serif text-4xl font-bold mb-8 text-center">
-            Glimpse of a Sabri Helpage's Impact
+            Glimpse of a Sabri Helpage&apos;s Impact
           </h1>
           <div className="max-w-[1000px] mx-auto mb-16">
-            <h2 className="font-serif text-2xl font-bold mb-8">Publications</h2>
+            <h2 className="md:text-4xl text-xl font-serif mb-8 text-center">
+              Publications
+            </h2>
             <PublicationsCarousel publications={publications} />
           </div>
           <div className="max-w-[1000px] mx-auto">
-            <h2 className="font-serif text-2xl font-bold mb-8">
+            <h2 className="md:text-4xl text-xl font-serif mb-8 text-center">
               Digital Publications
             </h2>
-            <PublicationsCarousel publications={digitalPublications} />
+            <VideoGrid videos={digitalPublications} />
           </div>
         </div>
       </section>

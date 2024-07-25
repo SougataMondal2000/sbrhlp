@@ -176,11 +176,10 @@ const Blog: React.FC = () => {
               </ul>
             </div>
 
-            <div>
+            {/* <div>
               <h2 className="text-2xl lg:text-4xl font-light mb-4 ">
                 Subscribe
               </h2>
-              {/* Subscribe Section */}
               <div className="md:w-full">
                 <form className="space-y-4 md:space-y-0 md:space-x-4 md:flex items-center ">
                   <div>
@@ -202,7 +201,7 @@ const Blog: React.FC = () => {
                   </button>
                 </form>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Main Content */}

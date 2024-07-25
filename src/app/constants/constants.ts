@@ -42,7 +42,7 @@ export const navLinks = [
   }
 ];
 
-export const causeContent = [{title:'Elderly care', desc:'Caring hearts, nurturing lives: Embracing seniors with dignity. Join us in making their golden years truly golden.',image:'https://images.unsplash.com/photo-1508847154043-be5407fcaa5a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', redirectTo: '/our-causes/elderly-care'},{title:'Mental health awareness',desc:'Break the silence, embrace hope: Explore resources, stories, and support for mental health awareness. Together, we can make a difference.',image:'https://images.unsplash.com/photo-1511297968426-a869b61af3da?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', redirectTo: '/our-causes/women-welfare'},{title:'Women and children welfare',desc:"Empowering women, nurturing children: Join us in ensuring a bright future. Together, let's champion women's rights and child welfare!",image:'https://images.unsplash.com/photo-1713381019717-ea77ede297bc?q=80&w=1970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', redirectTo: '/our-causes/mental-health'}]
+export const causeContent = [{title:'Elderly care', desc:'Caring hearts, nurturing lives: Embracing seniors with dignity. Join us in making their golden years truly golden.',image:'https://images.unsplash.com/photo-1508847154043-be5407fcaa5a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', redirectTo: '/our-causes/elderly-care'},{title:'Women and children welfare',desc:"Empowering women, nurturing children: Join us in ensuring a bright future. Together, let's champion women's rights and child welfare!",image:'https://images.unsplash.com/photo-1713381019717-ea77ede297bc?q=80&w=1970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', redirectTo: '/our-causes/mental-health'},{title:'Mental health awareness',desc:'Break the silence, embrace hope: Explore resources, stories, and support for mental health awareness. Together, we can make a difference.',image:'https://images.unsplash.com/photo-1511297968426-a869b61af3da?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', redirectTo: '/our-causes/women-welfare'},]
 
 export const footerSocialLinks = [
   {
@@ -78,4 +78,22 @@ export const awards = [
   { date: '28th January, 2020', title: 'Narendra Modi Letter', image: '/Modi_Ji_letter-1-724x1024.webp' },
 ];
 
-export const quickLinks = [{title:'About',redirectTo:'/about-us'},{title:'Awards & Recognition',redirectTo:'#'},{title:'Publication',redirectTo:'#'},{title:'Terms',redirectTo:'/terms-and-conditions'},{title:'Privacy',redirectTo:'/privacy-policy'},{title:'FAQs',redirectTo:'/faq'},]
+export const quickLinks = [{title:'About',redirectTo:'/about-us'},{title:'Awards & Recognition',redirectTo:'awards-and-recognition'},{title:'Publication',redirectTo:'publication'},{title:'Terms',redirectTo:'/terms-and-conditions'},{title:'Privacy',redirectTo:'/privacy-policy'},{title:'FAQs',redirectTo:'/faq'},]
+
+export const members = [
+    {
+        name: 'Aarti BR Singh',
+        image: '/images/aarti.jpg', // Update with the correct path to your image
+        details: 'A Psychoanalyst, an entrepreneur, and the founder of Sabri Helpage, Aarti BR Singh, is a woman of many talents and moods. She is very rooted in values and hard work with commitment and persistence. She exudes loyalty as well as empathy. Critical thinking is one of her better traits, making her a fantastic person in problem-solving. She believes, conducting charity out of a sense of responsibility, should be the first condition of the human being. It should come naturally to us and never be treated as a duty.'
+    },
+    {
+        name: 'Yash Guptaa',
+        image: '/images/yash.jpg', // Update with the correct path to your image
+        details: 'Details about Yash Guptaa...'
+    },
+    {
+        name: 'Prerna Guptaa',
+        image: '/images/prerna.jpg', // Update with the correct path to your image
+        details: 'Details about Prerna Guptaa...'
+    },
+];

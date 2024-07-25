@@ -7,7 +7,7 @@ import axios from "axios";
 import { baseURL } from "../baseurl";
 import RegistrationModal from "../components/RegistrationModal";
 
-const page: React.FC = () => {
+const Page: React.FC = () => {
   const [modalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -91,4 +91,4 @@ const page: React.FC = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -5,7 +5,7 @@ import Joinus from "../sections/Joinus";
 import { awards, members } from "../constants/constants";
 import Card from "../components/Card";
 
-const page: React.FC = () => {
+const Page: React.FC = () => {
   return (
     <main className="bg-[#F8F5F4]">
       <div className="w-full lg:h-[650px] md:h-[500px] h-[400px] overflow-hidden">
@@ -124,4 +124,4 @@ const page: React.FC = () => {
   );
 };
 
-export default page;
+export default Page;

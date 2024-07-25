@@ -2,7 +2,7 @@ import Donate from "../sections/Donate";
 import Joinus from "../sections/Joinus";
 import Partners from "../sections/Partners";
 
-const page: React.FC = () => {
+const Page: React.FC = () => {
   return (
     <main className="bg-[#F8F5F4]">
       <div className="w-full lg:h-[650px] md:h-[500px] h-[400px] overflow-hidden">
@@ -118,4 +118,4 @@ const page: React.FC = () => {
   );
 };
 
-export default page;
+export default Page;

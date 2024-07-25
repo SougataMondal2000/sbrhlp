@@ -3,11 +3,9 @@ import React, { useState } from "react";
 import Partners from "../sections/Partners";
 import Donate from "../sections/Donate";
 import Joinus from "../sections/Joinus";
-import axios from "axios";
-import { baseURL } from "../baseurl";
 import RegistrationModal from "../components/RegistrationModal";
 
-const page: React.FC = () => {
+const Page: React.FC = () => {
   const [modalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -22,7 +20,7 @@ const page: React.FC = () => {
 
       <div className="max-w-5xl mx-auto px-4 pt-8">
         <h1 className="lg:text-4xl md:text-2xl text-xl font-serif mb-8">
-          Sabri Helpage's The SocioFare: A Catalyst for Social Impact
+          Sabri Helpage&apos;s The SocioFare: A Catalyst for Social Impact
         </h1>
         <div className="flex flex-col md:flex-row gap-6">
           <div className="">
@@ -66,8 +64,9 @@ const page: React.FC = () => {
 
         <p className="text-lg">
           <strong>Secure your spot now! </strong>
-          Don't miss this opportunity to be part of something extraordinary.
-          Register for the first step and embark on a transformative journey.
+          Don&apos;t miss this opportunity to be part of something
+          extraordinary. Register for the first step and embark on a
+          transformative journey.
         </p>
       </div>
       <div className="flex justify-center mt-4 lg:mb-20 mb-10">
@@ -91,4 +90,4 @@ const page: React.FC = () => {
   );
 };
 
-export default page;
+export default Page;

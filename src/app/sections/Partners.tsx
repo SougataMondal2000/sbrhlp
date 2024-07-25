@@ -1,15 +1,12 @@
 const partnerIcons = [
   {
-    icon: "/shareyrheart.png",
+    icon: "/Sabri_Properties.webp",
   },
   {
-    icon: "/shareyrheart.png",
+    icon: "/Suhana_Shop.webp",
   },
   {
-    icon: "/shareyrheart.png",
-  },
-  {
-    icon: "/shareyrheart.png",
+    icon: "/Little_Lamb.webp",
   },
   {
     icon: "/shareyrheart.png",
@@ -32,7 +29,7 @@ const Partners = () => {
               <img
                 src={item.icon}
                 alt={`Partner ${index + 1}`}
-                className="w-[70%] h-full object-contain"
+                className="w-[200px] h-[200px] object-contain"
               />
             </div>
           ))}

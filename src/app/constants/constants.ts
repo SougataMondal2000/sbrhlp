@@ -83,17 +83,17 @@ export const quickLinks = [{title:'About',redirectTo:'/about-us'},{title:'Awards
 export const members = [
     {
         name: 'Aarti BR Singh',
-        image: '/images/aarti.jpg', // Update with the correct path to your image
+        image: '/images/aarti.jpg', 
         details: 'A Psychoanalyst, an entrepreneur, and the founder of Sabri Helpage, Aarti BR Singh, is a woman of many talents and moods. She is very rooted in values and hard work with commitment and persistence. She exudes loyalty as well as empathy. Critical thinking is one of her better traits, making her a fantastic person in problem-solving. She believes, conducting charity out of a sense of responsibility, should be the first condition of the human being. It should come naturally to us and never be treated as a duty.'
     },
     {
         name: 'Yash Guptaa',
-        image: '/images/yash.jpg', // Update with the correct path to your image
-        details: 'Details about Yash Guptaa...'
+        image: '/images/yash.jpg', 
+        details: 'Yash is a resilient seeker, experienced in diversely exposed business development projects within the e-learning sector. A solid background in algorithm building, engineering science, and decision-making and 2 years of direct team-leading expertise in sales, growth, and recruitment across the most aggressive- nascent startup industries gives me the relevant skills to bring the best to the table.'
     },
     {
         name: 'Prerna Guptaa',
-        image: '/images/prerna.jpg', // Update with the correct path to your image
-        details: 'Details about Prerna Guptaa...'
+        image: '/images/prerna.jpg', 
+        details: "Prerna's philanthropic activities were not only limited to providing money to different charities but also assisting the impoverished in their education while she was in her early twenties. She is a commerce graduate, seeking knowledge in International Business schemes in her master's with an emphasis on accounting who feels that financial freedom is essential."
     },
 ];

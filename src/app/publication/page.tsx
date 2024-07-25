@@ -81,6 +81,90 @@ const digitalPublications = [
   },
 ];
 
+const references = [
+  {
+    name: "SRB Bangla",
+    url: "https://srbnewsbangla.in/%e0%a6%b8%e0%a6%be%e0%a6%ac%e0%a6%b0%e0%a6%bf-%e0%a6%b9%e0%a7%87%e0%a6%b2%e0%a7%8d%e0%a6%aa%e0%a7%87%e0%a6%9c-%e0%a6%86%e0%a6%af%e0%a6%bc%e0%a7%8b%e0%a6%9c%e0%a6%bf%e0%a6%a4-%e0%a6%b8%e0%a7%8b/",
+  },
+  {
+    name: "Financial Samachar",
+    url: "https://financialsamachar.com/celebrating-changemakers-shaping-social",
+  },
+  {
+    name: "News Nation 360",
+    url: "https://www.newsnation360.com/post/sabri-helpage-honoured-padma-shri-chutni-mahato-and-other-social-change-makers-with-the-socio-fare-a",
+  },
+  {
+    name: "News Only 24",
+    url: "https://youtu.be/4X3DZgpVn2c?si=rHadwXAN1Bi1NsZ9",
+  },
+  {
+    name: "Channel One",
+    url: "https://youtu.be/Vj2ACOYEsFY?si=XODWqVcU9B50HK9e",
+  },
+  {
+    name: "The Indian Chronicle",
+    url: "https://theindianchronicles.com/celebrating-social-change-socio-fare-award-2024/",
+  },
+  {
+    name: "Voice of Kolkata",
+    url: "https://voiceofkolkata.com/sociofare-award-2024-by-sabri-helpage-honors-padma-shri-chutni-mahato-and-other-social-change-makers/",
+  },
+  {
+    name: "Banga Darpan News",
+    url: "https://bangadarpannews.com/socio-fair-awards-2024-honoring-social-change-makers-organized-by-sabri-helpz/",
+  },
+  {
+    name: "News Today",
+    url: "https://youtu.be/hreKdIFB2B0?si=v7pDAcofhiqsPzkm",
+  },
+  {
+    name: "The Kolkata Mail",
+    url: "https://thekolkatamail.com/2nd-socio-fare-award-2024-wonderful-celebration-of-social-service/",
+  },
+  { name: "Bangla Agea", url: "https://www.youtube.com/watch?v=XQ0mh9W8sMc" },
+  {
+    name: "Express News Bangla",
+    url: "https://expressnewsbangla.com/2024/05/11/%E0%A6%B8%E0%A6%BE%E0%A6%AC%E0%A6%B0%E0%A6%BF-%E0%A6%B9%E0%A7%87%E0%A6%B2%E0%A7%8D%E0%A6%AA%E0%A7%87%E0%A6%9C-%E0%A6%86%E0%A6%AF%E0%A6%BC%E0%A7%8B%E0%A6%9C%E0%A6%BF%E0%A6%A4-%E0%A6%B8%E0%A7%8B/",
+  },
+  {
+    name: "Sunrise News",
+    url: "http://sunrisnews.blogspot.com/2024/05/blog-post_49.html",
+  },
+  {
+    name: "Aaj Talkss",
+    url: "https://aajtalkss.in/2024/05/11/sociofare-awards-for-real-heroes/",
+  },
+  {
+    name: "Sangabad Ei Samay",
+    url: "http://sangbadeisamay.blogspot.com/2024/05/blog-post_35.html",
+  },
+  {
+    name: "Page 3 Online",
+    url: "https://www.facebook.com/story.php?story_fbid=840843388065062&id=100064182241125&mibextid=qi2Omg&rdid=rGZmNOtxf44Cdihn",
+  },
+  {
+    name: "News 22 Online",
+    url: "https://www.news22online.com/2024/05/13/socio-fare-award-2024-by-sabri-helpage-honors-padma-shri-chutni-mahato-and-other-social-change-makers/",
+  },
+  {
+    name: "Sananda (Magazine)",
+    url: "https://www.sananda.in/story?link=410873",
+  },
+  {
+    name: "Sananda (facebook)",
+    url: "https://www.facebook.com/story.php?story_fbid=836324265190164&id=100064377956038&mibextid=qi2Omg&rdid=bCOa0Xg71fp7Rpht",
+  },
+  {
+    name: "Deegdarshan",
+    url: "https://deegdarshan.com/padma-shri-chutni-mahato-and-other-social-activists-felicitated-at-the-socio-fair-awards-ceremony/",
+  },
+  {
+    name: "The Bengal Mirror",
+    url: "https://www.thebengalmirror.com/2024/05/the-sociofare-awards-2024-by-sabri-helpage.html",
+  },
+];
+
 const Page: React.FC = () => {
   return (
     <main className="bg-[#F8F5F4]">
@@ -107,6 +191,23 @@ const Page: React.FC = () => {
               Digital Publications
             </h2>
             <VideoGrid videos={digitalPublications} />
+            <div className="mt-8">
+              <h3 className="text-2xl font-serif mb-4">References</h3>
+              <ul className="list-disc pl-5">
+                {references.map((ref, index) => (
+                  <li key={index} className="mb-2">
+                    <a
+                      href={ref.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:underline"
+                    >
+                      {ref.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>

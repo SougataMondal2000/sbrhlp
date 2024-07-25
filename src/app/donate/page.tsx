@@ -90,7 +90,7 @@ const DonationForm = () => {
   };
 
   const handlePayment = async () => {
-    if (Number(donationAmount) >= 10) {
+    if (Number(donationAmount) >= 100) {
       await displayRazorpay();
     } else {
       alert("Donation amount must be equal to or more than 10!");

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Button from "../components/Button";
+import Link from "next/link";
 
 const Hero = () => {
   const [isEnglishVisible, setIsEnglishVisible] = useState(false);
@@ -15,7 +16,7 @@ const Hero = () => {
         className="absolute inset-0 bg-fixed bg-cover bg-center bg-no-repeat opacity-25"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1560790671-b76ca4de55ef?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+            "url('https://images.unsplash.com/photo-1544132173-46e0a80d5d4a?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
         }}
       ></div>
       <div className="absolute inset-0 bg-blue-100 opacity-20"></div>
@@ -23,15 +24,15 @@ const Hero = () => {
         <div className="relative mb-[70px]">
           <section className="relative lg:h-[900px] md:h-[400px] h-[700px] w-full">
             <img
-              src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmtmcWk1bTcwdnhpOWRoMXZnZzUzd3lpem9rcjJ6YjI1cHg3N3B4eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qgCkPA6zpzsHpqmCtg/giphy.webp"
+              src="https://images.unsplash.com/photo-1544132173-46e0a80d5d4a?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Sabri Helpage video"
               className="w-full h-full object-cover op"
             />
             <div className="absolute inset-0  bg-opacity-85 text-black lg:p-8 lg:w-[1000px] lg:h-[300px] md:p-8 md:w-[650px] md:h-[250px] w-[80%] h-fit py-2 my-auto mx-auto">
-              <h1 className="font-serif md:text-3xl text-2xl lg:text-8xl font-bold md:mb-4 mb-2 text-center text-[#FF7536] shadow-text">
+              <h1 className="font-serif md:text-3xl text-2xl lg:text-8xl font-bold md:mb-4 mb-2 text-center text-white shadow-text">
                 SABRI HELPAGE
               </h1>
-              <p className="lg:text-xl md:text-lg text-base text-center text-[#FF7536] shadow-text font-semibold">
+              <p className="lg:text-xl md:text-lg text-base text-center text-white shadow-text font-semibold">
                 Serving society for more than a decade.
               </p>
             </div>
@@ -60,7 +61,9 @@ const Hero = () => {
               and global development.
             </h2>
             <div className="flex justify-center md:mb-20 mb-10">
-              <Button label={"Read More"} boxShadow={""} />
+              <Link href={"/about-us"}>
+                <Button label={"Read More"} boxShadow={""} />
+              </Link>
             </div>
           </div>
         </div>

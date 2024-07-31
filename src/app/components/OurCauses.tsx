@@ -29,7 +29,7 @@ const CausePage: FC<CausePageProps> = ({
         <img
           src={imageUrl}
           alt={title}
-          className="w-full h-64 object-cover rounded-lg shadow-lg"
+          className="w-full md:h-96 h-64 object-cover rounded-lg shadow-lg"
         />
       </div>
 

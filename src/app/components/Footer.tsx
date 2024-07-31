@@ -57,13 +57,16 @@ const Footer = () => {
           <h2 className="text-[#FF6B35] text-xl font-semibold mb-4">
             Quick Links
           </h2>
-          <ul className="space-y-2 text-sm">
+          <ul className="flex flex-wrap text-sm">
             {quickLinks.map((item: any, index) => (
-              <li key={item}>
+              <li key={item} className="mr-4 mb-2">
                 <a href={item.redirectTo}>{item.title}</a>
               </li>
             ))}
           </ul>
+        </div>
+        <div>
+          <img src="/dummyqr.jpg" alt="" className="w-48" />
         </div>
 
         {/* Subscribe Section */}
@@ -93,7 +96,7 @@ const Footer = () => {
         </div> */}
 
         {/* Reach Us Section */}
-        <div>
+        {/* <div>
           <h2 className="text-[#FF6B35] text-xl font-semibold mb-4">
             Reach Us
           </h2>
@@ -131,7 +134,7 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
       <div className="text-center border-t border-t-gray-300 lg:px-10 lg:pt-4 p-2">
         <div>

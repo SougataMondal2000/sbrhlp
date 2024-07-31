@@ -6,7 +6,7 @@ const MentalHealth = () => {
       title="Mental Health Awareness"
       description="Let's Build on Sabri Helpage's Impact. Sabri Helpage: Championing Mental Health."
       imageUrl={
-        "https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "https://images.unsplash.com/photo-1604881991720-f91add269bed?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       }
       videoUrl="https://www.youtube.com/embed/your_video_id"
       content={`

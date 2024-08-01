@@ -102,13 +102,13 @@ const DonationForm = () => {
 
   return (
     <main>
-      <div className="w-full lg:h-[650px] md:h-[500px] h-[400px] overflow-hidden">
+      {/* <div className="w-full lg:h-[650px] md:h-[500px] h-[400px] overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1658801956904-43841e89d831?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Emblem"
           className="object-cover w-full h-full"
         />
-      </div>
+      </div> */}
       <div className="lg:w-[60%] mx-auto p-12">
         <div className="mb-4">
           <label className="block text-sm font-medium mb-1">Your Name *</label>

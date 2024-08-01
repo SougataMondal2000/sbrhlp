@@ -13,7 +13,7 @@ import { IoIosMail } from "react-icons/io";
 const Footer = () => {
   return (
     <footer className="bg-black text-white py-12 px-4 md:px-8">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 lg:mb-10 mb-4">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 lg:mb-10 mb-4">
         {/* Sabri Helpage Section */}
         <div>
           <h2 className="text-[#FF6B35] text-xl font-semibold mb-4">
@@ -26,6 +26,20 @@ const Footer = () => {
             Office of the organization. Sabri Helpage stands firmly behind the
             prohibition of discrimination.
           </p>
+        </div>
+
+        {/* Quick Links Section */}
+        <div>
+          <h2 className="text-[#FF6B35] text-xl font-semibold mb-4">
+            Quick Links
+          </h2>
+          <ul className="flex flex-wrap text-sm">
+            {quickLinks.map((item: any, index) => (
+              <li key={item} className="mr-4 mb-2">
+                <a href={item.redirectTo}>{item.title}</a>
+              </li>
+            ))}
+          </ul>
           <div className="flex space-x-2">
             {footerSocialLinks.map((social: any, index) => (
               <a
@@ -50,20 +64,6 @@ const Footer = () => {
               </a>
             ))}
           </div>
-        </div>
-
-        {/* Quick Links Section */}
-        <div>
-          <h2 className="text-[#FF6B35] text-xl font-semibold mb-4">
-            Quick Links
-          </h2>
-          <ul className="flex flex-wrap text-sm">
-            {quickLinks.map((item: any, index) => (
-              <li key={item} className="mr-4 mb-2">
-                <a href={item.redirectTo}>{item.title}</a>
-              </li>
-            ))}
-          </ul>
         </div>
         <div>
           <img src="/dummyqr.jpg" alt="" className="w-48" />

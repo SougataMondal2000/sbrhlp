@@ -22,7 +22,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-blue-100 opacity-20"></div>
       <div className="relative z-10">
         <div className="relative mb-[70px]">
-          <section className="relative lg:h-[900px] md:h-[400px] h-[700px] w-full">
+          <section className="relative lg:h-[500px] md:h-[00px] h-[350px] w-full">
             <img
               src="https://images.unsplash.com/photo-1544132173-46e0a80d5d4a?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Sabri Helpage video"
@@ -44,7 +44,7 @@ const Hero = () => {
             onMouseLeave={handleToggle}
           >
             <p className="text-center text-white lg:text-4xl md:text-2xl text-xl">
-              {isEnglishVisible ? "May all be happy" : "सर्वे भवन्तु सुखिन"}
+              {isEnglishVisible ? "May all be happy" : "सर्वे भवन्तु सुखिन:"}
             </p>
           </div>
         </div>

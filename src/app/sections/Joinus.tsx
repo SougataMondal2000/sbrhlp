@@ -16,11 +16,11 @@ const Joinus = () => {
         <h3 className="text-5xl lg:text-6xl mb-4">Join Us</h3>
         <hr className="my-4 md:my-6" />
         <p className="text-xl lg:text-2xl mb-8">
-          Changing lives, one act of kindness at a time
+          Let&apos;s make life better...together.
         </p>
         <div className="flex justify-center gap-10 items-center">
           <Button label={"Be a Partner"} boxShadow={"none"} />
-          <Link href="/joinus">
+          <Link href="/ngo-summit">
             <Button label={"Join Our Team"} boxShadow={"none"} />
           </Link>
         </div>

@@ -88,7 +88,7 @@ const Blog: React.FC = () => {
   return (
     <div>
       <main>
-        <div className="relative h-[450px] flex mx-2">
+        {/* <div className="relative h-[450px] flex mx-2">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
@@ -114,7 +114,7 @@ const Blog: React.FC = () => {
               &#9654;
             </button>
           </div>
-        </div>
+        </div> */}
         <div className="flex justify-center items-center w-full gap-2">
           {posts.map((item, index) => (
             <div

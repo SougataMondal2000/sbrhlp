@@ -6,7 +6,7 @@ const Awards = () => {
       <div className="lg:w-[60%] md:w-[90%] w-[80%] mx-auto leading-6 flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="md:w-[50%]">
           <h3 className="font-serif lg:text-5xl lg:mb-6 md:text-3xl text-2xl mb-6 font-semibold">
-            The SocioFare Awards
+            The SocioFare
           </h3>
           <h2 className="text-gray-600 lg:mb-10 mb-8 leading-10 md:text-sm text-xs">
             The SocioFare Awards, a prestigious Award by Sabri Helpage, shines a

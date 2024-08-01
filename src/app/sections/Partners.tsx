@@ -2,9 +2,9 @@ const partnerIcons = [
   {
     icon: "/Sabri_Properties.webp",
   },
-  {
-    icon: "/Suhana_Shop.webp",
-  },
+  // {
+  //   icon: "/Suhana_Shop.webp",
+  // },
   {
     icon: "/Little_Lamb.webp",
   },

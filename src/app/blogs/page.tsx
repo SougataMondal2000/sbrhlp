@@ -5,7 +5,7 @@ import Link from "next/link";
 import Button from "../components/Button";
 import Joinus from "../sections/Joinus";
 import { baseURL } from "../baseurl";
-
+import { MoonLoader } from "react-spinners";
 interface Post {
   _id: number;
   title: string;
@@ -34,6 +34,7 @@ const Blog: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [category, setCategory] = useState<string>("");
   const [title, setTitle] = useState<string>("");
+  const [loading, setLoading] = useState(false);
 
   const handleChangeCategory = (cat: string) => {
     setCategory(cat);
@@ -44,11 +45,13 @@ const Blog: React.FC = () => {
   };
 
   useEffect(() => {
+    setLoading(true);
     axios
       .get(`${baseURL}/posts`)
       .then((response) => {
         setRecentPosts(response.data.slice(0, 2));
         setMainTitle(response.data[0]?.title || "Default Title");
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching the blog posts:", error);
@@ -115,7 +118,7 @@ const Blog: React.FC = () => {
             </button>
           </div>
         </div> */}
-        <div className="flex justify-center items-center w-full gap-2">
+        {/* <div className="flex justify-center items-center w-full gap-2">
           {posts.map((item, index) => (
             <div
               key={index}
@@ -126,57 +129,65 @@ const Blog: React.FC = () => {
               )}
             </div>
           ))}
-        </div>
-        <div className="lg:w-[70%] lg:mx-auto flex flex-col lg:flex-row mx-4 py-8">
-          {/* Left Sidebar */}
-          <div className="w-full lg:w-1/4 p-4 mb-8 lg:mb-0">
-            <div className="mb-8">
-              <input
-                type="text"
-                placeholder="Search by title..."
-                className="w-full p-2 border rounded"
-                onChange={handleSearch}
-              />
-            </div>
+        </div> */}
+        <h1 className="md:text-5xl text-3xl font-serif text-center mt-12">
+          All Blogs
+        </h1>
+        {loading ? (
+          <div className="flex justify-center items-center">
+            <MoonLoader color={"#FF7536"} />
+          </div>
+        ) : (
+          <div className="lg:w-[70%] lg:mx-auto flex flex-col lg:flex-row mx-4 py-8">
+            {/* Left Sidebar */}
+            <div className="w-full lg:w-1/4 p-4 mb-8 lg:mb-0">
+              <div className="mb-8">
+                <input
+                  type="text"
+                  placeholder="Search by title..."
+                  className="w-full p-2 border rounded"
+                  onChange={handleSearch}
+                />
+              </div>
 
-            <div className="mb-8">
-              <h2 className="text-2xl lg:text-4xl font-light mb-4">
-                Recent Posts
-              </h2>
-              <ul>
-                {recentPosts.map((post, index) => (
-                  <li key={index} className="mb-2">
-                    <Link
-                      href={`#`}
-                      className="text-orange-500 hover:underline"
-                    >
-                      {post.title}
-                    </Link>
-                    <p className="text-sm text-gray-500">{post.date}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
+              <div className="mb-8">
+                <h2 className="text-2xl lg:text-4xl font-light mb-4">
+                  Recent Posts
+                </h2>
+                <ul>
+                  {recentPosts.map((post, index) => (
+                    <li key={index} className="mb-2">
+                      <Link
+                        href={`#`}
+                        className="text-orange-500 hover:underline"
+                      >
+                        {post.title}
+                      </Link>
+                      <p className="text-sm text-gray-500">{post.date}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-            <div className="mb-8">
-              <h2 className="text-2xl lg:text-4xl font-light mb-4">
-                Categories
-              </h2>
-              <ul>
-                {categories.map((item, index) => (
-                  <li key={index}>
-                    <button
-                      onClick={() => handleChangeCategory(item.value)}
-                      className="text-orange-500 hover:underline"
-                    >
-                      {item.name}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
+              <div className="mb-8">
+                <h2 className="text-2xl lg:text-4xl font-light mb-4">
+                  Categories
+                </h2>
+                <ul>
+                  {categories.map((item, index) => (
+                    <li key={index}>
+                      <button
+                        onClick={() => handleChangeCategory(item.value)}
+                        className="text-orange-500 hover:underline"
+                      >
+                        {item.name}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-            {/* <div>
+              {/* <div>
               <h2 className="text-2xl lg:text-4xl font-light mb-4 ">
                 Subscribe
               </h2>
@@ -202,57 +213,62 @@ const Blog: React.FC = () => {
                 </form>
               </div>
             </div> */}
-          </div>
-
-          {/* Main Content */}
-          <div className="w-full lg:w-3/4 p-4">
-            <div className="mb-4 flex flex-wrap">
-              {categories.map((item, index) => (
-                <button
-                  className={`${
-                    item.value === category
-                      ? "bg-orange-500 text-white px-4 py-2 rounded mr-2 mb-2 lg:mb-0 text-xs"
-                      : "border border-orange-500 text-orange-500 px-4 py-2 rounded mr-2 mb-2 lg:mb-0 hover:text-white hover:bg-orange-500 text-xs"
-                  }`}
-                  onClick={() => handleChangeCategory(item.value)}
-                  key={index}
-                >
-                  {item.name}
-                </button>
-              ))}
             </div>
 
-            <div className="mb-8">
-              <div className="grid md:grid-cols-2 lg:flex lg:flex-col gap-4">
-                {posts.length > 0 ? (
-                  posts.map((post, index) => (
-                    <div key={index} className="lg:flex lg:flex-col mb-4">
-                      <img
-                        src={post.image || "/Educating_Children.webp"}
-                        alt={post.title}
-                        className="w-full lg:w-[360px] h-40 object-cover mb-4 lg:mb-0 lg:mr-4"
-                      />
-                      <div>
-                        <h3 className="text-xl font-bold mb-2">{post.title}</h3>
-                        <p className="text-gray-700 mb-2">
-                          {post.content.substring(0, 100)}...
-                        </p>
-                        <Link
-                          href={`/blogs/${post._id}`}
-                          className="text-orange-500 hover:underline"
-                        >
-                          Read More
-                        </Link>
+            {/* Main Content */}
+            <div className="w-full lg:w-3/4 p-4">
+              <div className="mb-4 flex flex-wrap">
+                {categories.map((item, index) => (
+                  <button
+                    className={`${
+                      item.value === category
+                        ? "bg-orange-500 text-white px-4 py-2 rounded mr-2 mb-2 lg:mb-0 text-xs"
+                        : "border border-orange-500 text-orange-500 px-4 py-2 rounded mr-2 mb-2 lg:mb-0 hover:text-white hover:bg-orange-500 text-xs"
+                    }`}
+                    onClick={() => handleChangeCategory(item.value)}
+                    key={index}
+                  >
+                    {item.name}
+                  </button>
+                ))}
+              </div>
+
+              <div className="mb-8">
+                <div className="grid md:grid-cols-2 lg:flex lg:flex-col gap-4">
+                  {posts.length > 0 ? (
+                    posts.map((post, index) => (
+                      <div key={index} className="lg:flex lg:flex-col mb-4">
+                        <img
+                          src={post.image || "/Educating_Children.webp"}
+                          alt={post.title}
+                          className="w-full lg:w-[360px] h-40 object-cover mb-4 lg:mb-0 lg:mr-4"
+                        />
+                        <div>
+                          <h3 className="text-xl font-bold">{post.title}</h3>
+                          <p
+                            className="text-gray-700"
+                            dangerouslySetInnerHTML={{
+                              __html: post.content,
+                            }}
+                          ></p>
+                          <Link
+                            href={`/blogs/${post._id}`}
+                            className="text-orange-500 hover:underline"
+                          >
+                            Read More
+                          </Link>
+                        </div>
                       </div>
-                    </div>
-                  ))
-                ) : (
-                  <>No blog available!</>
-                )}
+                    ))
+                  ) : (
+                    <>No blog available!</>
+                  )}
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
+
         <Joinus />
       </main>
     </div>

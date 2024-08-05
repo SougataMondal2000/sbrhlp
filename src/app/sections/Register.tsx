@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Button from "../components/Button";
 
-const Donate = () => {
+const Register = () => {
   return (
     <div className="relative lg:h-[420px] md:h-[300px] h-[200px] flex items-center justify-center">
       <div
@@ -13,12 +13,10 @@ const Donate = () => {
       ></div>
       <div className="absolute inset-0 bg-black opacity-30"></div>
       <div className="relative text-center text-white px-4 lg:w-[60%] md:w-[90%] w-[80%]">
-        <p className="text-xl lg:text-4xl lg:mb-14 mb-8">
-          Your donation makes a difference.
-        </p>
+        <p className="text-xl lg:text-4xl lg:mb-14 mb-8">Intern with us</p>
         <div className="flex justify-center gap-10 items-center">
-          <Link href="/donate">
-            <Button label="Donate" boxShadow={"none"} />
+          <Link href="/internship/registration">
+            <Button label="Register" boxShadow={"none"} />
           </Link>
         </div>
       </div>
@@ -26,4 +24,4 @@ const Donate = () => {
   );
 };
 
-export default Donate;
+export default Register;

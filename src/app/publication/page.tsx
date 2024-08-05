@@ -5,6 +5,7 @@ import Donate from "../sections/Donate";
 import Joinus from "../sections/Joinus";
 import PublicationsCarousel from "../components/PublicationsCarousal";
 import VideoGrid from "../components/VideoGrid";
+import Register from "../sections/Register";
 
 const publications = [
   {
@@ -191,7 +192,7 @@ const Page: React.FC = () => {
               Digital Publications
             </h2>
             <VideoGrid videos={digitalPublications} />
-            <div className="mt-8">
+            {/* <div className="mt-8">
               <h3 className="text-2xl font-serif mb-4">References</h3>
               <ul className="list-disc pl-5">
                 {references.map((ref, index) => (
@@ -207,13 +208,13 @@ const Page: React.FC = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
       <Joinus />
       <Partners />
-      <Donate />
+      <Register />
     </main>
   );
 };

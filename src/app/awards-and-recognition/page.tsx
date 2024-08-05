@@ -3,6 +3,7 @@ import Partners from "../sections/Partners";
 import Donate from "../sections/Donate";
 import Joinus from "../sections/Joinus";
 import { awards } from "../constants/constants";
+import Register from "../sections/Register";
 
 const Page: React.FC = () => {
   return (
@@ -93,7 +94,7 @@ const Page: React.FC = () => {
 
       <Joinus />
       <Partners />
-      <Donate />
+      <Register />
     </main>
   );
 };

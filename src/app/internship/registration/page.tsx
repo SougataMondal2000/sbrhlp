@@ -4,8 +4,10 @@ import Button from "@/app/components/Button";
 import Donate from "@/app/sections/Donate";
 import axios from "axios";
 import { useState } from "react";
+import { BeatLoader } from "react-spinners";
 
 const Page: React.FC = () => {
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -37,6 +39,7 @@ const Page: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const formDataToSend = new FormData();
       Object.entries(formData).forEach(([key, value]) => {
@@ -67,6 +70,7 @@ const Page: React.FC = () => {
         coverLetter: "",
         cv: null,
       });
+      setLoading(false);
     } catch (error) {
       console.error("Error sending internship details:", error);
       alert("An error occurred while submitting the form.");
@@ -82,11 +86,15 @@ const Page: React.FC = () => {
           className="object-cover w-full h-full"
         />
       </div> */}
+
       <form
         onSubmit={handleSubmit}
         className="lg:w-[60%] mx-auto p-12 space-y-4"
       >
         <div>
+          <h1 className="md:text-5xl text-3xl font-serif text-center mb-12">
+            Register for the Internship
+          </h1>
           <label htmlFor="name" className="block mb-1 text-sm font-medium">
             Name *
           </label>
@@ -250,7 +258,7 @@ const Page: React.FC = () => {
             type="submit"
             className="px-6 py-2 bg-orange-500 text-white rounded hover:bg-orange-600"
           >
-            Submit
+            {loading ? <BeatLoader color="white" /> : "Submit"}
           </button>
         </div>
       </form>

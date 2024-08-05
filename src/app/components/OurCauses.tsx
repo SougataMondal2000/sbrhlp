@@ -21,10 +21,6 @@ const CausePage: FC<CausePageProps> = ({
 
   return (
     <div className="max-w-6xl mx-auto py-12 px-4">
-      <h1 className="text-4xl font-bold mb-6 text-center text-[#FF7536]">
-        {title}
-      </h1>
-
       <div className="w-full mb-8">
         <img
           src={imageUrl}
@@ -33,23 +29,14 @@ const CausePage: FC<CausePageProps> = ({
         />
       </div>
 
-      <div className="flex flex-col md:flex-row gap-8 mb-12">
-        {videoUrl && (
-          <div className="md:w-1/2">
-            <iframe
-              width="100%"
-              height="315"
-              src={videoUrl}
-              frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="rounded-lg shadow-lg"
-            ></iframe>
-          </div>
-        )}
-        <div className="prose prose-lg max-w-none md:w-1/2">
+      <div className="mb-12">
+        <h1 className="text-4xl font-bold mb-6 text-center text-[#FF7536]">
+          {title}
+        </h1>
+        <div className="prose prose-lg max-w-none md:w-full">
           <p>{description}</p>
-          <div
+          <p dangerouslySetInnerHTML={{ __html: content }}></p>
+          {/* <div
             className={`relative overflow-hidden transition-all duration-500 ease-in-out ${
               isContentExpanded ? "max-h-full" : "max-h-96"
             }`}
@@ -64,8 +51,21 @@ const CausePage: FC<CausePageProps> = ({
             className="mt-4 px-6 py-2 bg-[#FF7536] text-white rounded-full hover:scale-110 duration-300 md:py-4 focus:outline-none focus:ring-2 focus:ring-[#FF7536] focus:ring-offset-2"
           >
             {isContentExpanded ? "Read Less" : "Read More"}
-          </button>
+          </button> */}
         </div>
+        {videoUrl && (
+          <div className=" flex justify-center mt-12">
+            <iframe
+              width="50%"
+              height="315"
+              src={videoUrl}
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="rounded-lg shadow-lg"
+            ></iframe>
+          </div>
+        )}
       </div>
     </div>
   );

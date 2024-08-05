@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-50 lg:h-[150px] flex md:justify-around justify-between items-center p-4 shadow-2xl text-sm bg-white">
+    <nav className="sticky top-0 z-50 lg:h-[150px] flex md:justify-around justify-between items-center p-4 shadow-lg text-sm bg-white">
       <section>
         <Link href="/">
           <Image

@@ -1,6 +1,9 @@
+import { CiPhone } from "react-icons/ci";
 import Donate from "../sections/Donate";
 import Joinus from "../sections/Joinus";
 import Partners from "../sections/Partners";
+import Register from "../sections/Register";
+import { IoMailOutline } from "react-icons/io5";
 
 const Page: React.FC = () => {
   return (
@@ -101,26 +104,32 @@ const Page: React.FC = () => {
           </p>
         </section>
 
-        <section>
-          <p className="mb-4">
-            The use of this website must end right away if these terms and
-            conditions are not acknowledged in full.
-          </p>
-          <p>
-            Sabri Helpage can be found registered at:
+        <div className="max-w-5xl mx-auto px-4 py-8">
+          <h2 className="text-2xl font-serif mb-2">Contact</h2>
+          <address className="not-italic">
+            Sabri Helpage
             <br />
-            7B Mysore Road, Rashbehari Avenue,
+            7B, Mysore Road
             <br />
-            Kolkata – 700033
+            Rashbehari Avenue
             <br />
-            Mobile no: 9674536860
-          </p>
-        </section>
+            Kolkata - 700026
+            <br />
+            <div className="flex justify-normal items-center gap-1">
+              <CiPhone />
+              <a href="tel:033-4601-3886">033-4601 3886</a>
+            </div>
+            <div className="flex justify-normal items-center gap-1">
+              <IoMailOutline />
+              <a href="mailto:info@sabrihelpage.org"> info@sabrihelpage.org</a>
+            </div>
+          </address>
+        </div>
       </div>
 
       <Joinus />
       <Partners />
-      <Donate />
+      <Register />
     </main>
   );
 };

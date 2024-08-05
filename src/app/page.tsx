@@ -7,6 +7,7 @@ import Testimonials from "./sections/Testimonials";
 import Partnars from "./sections/Partners";
 import Donate from "./sections/Donate";
 import Causes from "./sections/Causes";
+import Register from "./sections/Register";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       <Awards />
       <Testimonials />
       <Partnars />
-      <Donate />
+      <Register />
     </main>
   );
 }

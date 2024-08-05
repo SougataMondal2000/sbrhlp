@@ -1,5 +1,6 @@
 import Button from "@/app/components/Button";
 import Donate from "@/app/sections/Donate";
+import Register from "../sections/Register";
 
 const Page: React.FC = () => {
   return (
@@ -74,7 +75,7 @@ const Page: React.FC = () => {
         </section>
       </main>
 
-      <Donate />
+      <Register />
     </div>
   );
 };

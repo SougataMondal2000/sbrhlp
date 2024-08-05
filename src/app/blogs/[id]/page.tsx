@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { baseURL } from "@/app/baseurl";
+import { MoonLoader } from "react-spinners";
 
 interface Post {
   _id: number;
@@ -18,14 +19,17 @@ interface Post {
 
 const Page: React.FC = () => {
   const [post, setPost] = useState<Post | null>(null);
+  const [loading, setLoading] = useState(false);
   const pathName = usePathname();
   const id = pathName.split("/").pop();
 
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true);
       try {
         const res = await axios.get<Post>(`${baseURL}/posts/${id}`);
         setPost(res.data);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching post:", error);
       }
@@ -35,7 +39,19 @@ const Page: React.FC = () => {
   }, [id]);
 
   if (!post) {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex justify-center items-center">
+        <MoonLoader color={"#FF7536"} />
+      </div>
+    );
+  }
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center">
+        <MoonLoader color={"#FF7536"} />
+      </div>
+    );
   }
 
   return (

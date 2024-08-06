@@ -14,8 +14,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
   rating,
 }) => {
   return (
-    <div className="max-w-md bg-white rounded-lg overflow-hidden shadow-lg relative m-4">
-      {/* Pink left border */}
+    <div className="lg:w-[500px] md:w-[400px] w-[300px] flex-shrink-0 snap-center bg-white rounded-lg overflow-hidden shadow-lg relative m-2">
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-pink-500"></div>
       <div className="p-6">
         <div className="flex items-center mb-4">

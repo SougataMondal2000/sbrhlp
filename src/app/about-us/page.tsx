@@ -9,6 +9,7 @@ import Register from "../sections/Register";
 import { IoMailOutline } from "react-icons/io5";
 import { CiPhone } from "react-icons/ci";
 import { CiLocationOn } from "react-icons/ci";
+import { RxCross1 } from "react-icons/rx";
 import { Viewer, Worker } from "@react-pdf-viewer/core";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css";
@@ -34,11 +35,8 @@ const PreviewModal: React.FC<PreviewModalProps> = ({ file, onClose }) => {
     <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
       <div className="modal-content bg-white p-4 rounded-md border border-[#9C8E73] w-[80%] h-[80%]">
         <div className="flex justify-end mb-2">
-          <button
-            onClick={onClose}
-            className="border border-[#9C8E73] text-[#9C8E73] hover:bg-[#9C8E73] hover:text-white py-1 px-6 rounded-full font-bold"
-          >
-            Close
+          <button onClick={onClose} className="">
+            <RxCross1 />
           </button>
         </div>
         <div className="overflow-auto h-[90%]">{renderFilePreview()}</div>

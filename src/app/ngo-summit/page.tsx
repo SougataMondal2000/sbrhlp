@@ -83,8 +83,8 @@ const Page: React.FC = () => {
               <li>
                 <strong>Investor Confidence:</strong> Investors increasingly
                 prioritize ESG factors. Participating in such summits can signal
-                a company's long-term sustainability and attract responsible
-                investors.
+                a company&apos;s long-term sustainability and attract
+                responsible investors.
               </li>
             </ul>
           </div>

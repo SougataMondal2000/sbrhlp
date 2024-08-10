@@ -58,7 +58,7 @@ const events2013 = [
 ];
 
 const Events2013Page = () => {
-  return <EventPage year="2013" events={events2013} />;
+  return <EventPage year={"2013"} />;
 };
 
 export default Events2013Page;

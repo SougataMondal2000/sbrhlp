@@ -20,49 +20,102 @@ const Page: React.FC = () => {
       </div> */}
 
       <div className="max-w-5xl mx-auto px-4 pt-8">
-        <h1 className="lg:text-4xl md:text-2xl text-xl font-serif mb-8">
-          Sabri Helpage&apos;s The SocioFare: A Catalyst for Social Impact
+        <h1 className="lg:text-4xl md:text-2xl text-xl font-serif mb-6 font-bold">
+          Sabri Helpage&apos;s Global CSR & ESG Summit: A Catalyst for Change
         </h1>
+        <h2 className="font-bold lg:text-xl md:text-lg text-base mb-4">
+          Understanding CSR and ESG
+        </h2>
         <div className="flex flex-col md:flex-row gap-6">
           <div className="">
             <p className="mb-4 ">
-              <strong>Sabri Helpage,</strong> through its innovative initiative,
-              The SocioFare, is poised to revolutionize the non-profit sector.
-              The NGO Summit-The SocioFare is a groundbreaking platform designed
-              to empower Non-Profit Organizations (NPOs) and facilitate
-              impactful collaborations with corporates.
+              Before we delve into the potential benefits of the summit,
+              it&apos;s essential to understand the core concepts of CSR and
+              ESG.
             </p>
-
-            <p className="mb-4 ">
-              Key objectives of NGO Summit-The SocioFare include:
-            </p>
-
             <ul className="list-disc pl-5 mb-4 ">
               <li>
-                <strong>Empowering NPOs:</strong> Providing NPOs with essential
-                tools, knowledge, and networks to enhance their operational
-                efficiency and social impact.
+                <strong>Corporate Social Responsibility (CSR):</strong> This is
+                a self-regulating business model that helps a company be
+                socially accountable to itself, its stakeholders, and the
+                public.
               </li>
               <li>
-                <strong>Fostering Partnerships:</strong> Creating a dynamic
-                ecosystem where NPOs and corporates can connect, collaborate,
-                and drive sustainable change.
-              </li>
-              <li>
-                <strong>Building Trust and Transparency:</strong> Conducting
-                thorough audits of participating NPOs to ensure accountability
-                and ethical practices.
+                <strong>Environmental, Social, and Governance (ESG):</strong>{" "}
+                This framework measures a company&apos;s performance in vital
+                areas such as corporate governance, social responsibility, and
+                environmental impact.
               </li>
             </ul>
           </div>
         </div>
-
-        <p className=" mb-4">
-          By bringing together NPOs, corporates, and industry experts, The
-          SocioFare aims to create a thriving ecosystem of social innovation and
-          positive change.
-        </p>
-
+        <h2 className="font-bold lg:text-xl md:text-lg text-base mb-4">
+          Potential Benefits of the Global CSR & ESG Summit
+        </h2>
+        <div className="flex flex-col md:flex-row gap-6">
+          <div className="">
+            <p className="mb-4 ">
+              Assuming the summit is designed to promote CSR and ESG practices,
+              it could offer several benefits:
+            </p>
+            <ul className="list-disc pl-5 mb-4 ">
+              <li>
+                <strong>Knowledge Sharing:</strong> Bringing together industry
+                experts, NGOs, and policymakers can facilitate the exchange of
+                best practices and innovative solutions.
+              </li>
+              <li>
+                <strong>Networking Opportunities:</strong> Such platforms can
+                foster collaborations and partnerships among different
+                stakeholders, leading to impactful projects.
+              </li>
+              <li>
+                <strong>Policy Advocacy:</strong> It can influence policy
+                decisions by highlighting the importance of CSR and ESG,
+                encouraging governments to create a supportive environment.
+              </li>
+              <li>
+                <strong>Brand Reputation Enhancement:</strong> Companies
+                participating in such summits can showcase their commitment to
+                sustainability and social responsibility, enhancing their brand
+                image.
+              </li>
+              <li>
+                <strong>Investor Confidence:</strong> Investors increasingly
+                prioritize ESG factors. Participating in such summits can signal
+                a company&apos;s long-term sustainability and attract
+                responsible investors.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <h2 className="font-bold lg:text-xl md:text-lg text-base mb-4">
+          Potential Impact on Society
+        </h2>
+        <div className="flex flex-col md:flex-row gap-6">
+          <div className="">
+            <p className="mb-4 ">
+              A successful CSR & ESG summit can have a far-reaching impact on
+              society:
+            </p>
+            <ul className="list-disc pl-5 mb-4 ">
+              <li>
+                <strong>Environmental Sustainability:</strong> It can drive
+                initiatives to reduce carbon emissions, conserve resources, and
+                promote clean energy.
+              </li>
+              <li>
+                <strong>Social Development:</strong> The summit can focus on
+                issues like poverty alleviation, education, healthcare, and
+                community development.
+              </li>
+              <li>
+                <strong>Good Governance:</strong> It can promote transparency,
+                accountability, and ethical business practices.
+              </li>
+            </ul>
+          </div>
+        </div>
         <p className="text-lg">
           <strong>Secure your spot now! </strong>
           Don&apos;t miss this opportunity to be part of something

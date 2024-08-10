@@ -37,7 +37,7 @@ const events2021 = [
 ];
 
 const Events2021Page = () => {
-  return <EventPage year="2021" events={events2021} />;
+  return <EventPage year={"2021"} />;
 };
 
 export default Events2021Page;

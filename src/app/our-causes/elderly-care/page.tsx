@@ -8,7 +8,7 @@ const ElderlyCare = () => {
       imageUrl={
         "https://images.unsplash.com/photo-1559234938-b60fff04894d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       }
-      videoUrl="https://www.youtube.com/embed/your_video_id"
+      playlistUrl="PL4G5MTAzh8EmNIfrwu7lJZoyjSVwTCUZY&si=40E50jv0HCc5AZOn"
       content={`
         <p>Sabri Helpage is dedicated to enhancing the lives of senior citizens by addressing their critical healthcare needs. Our organization offers a comprehensive range of support services, including:</p>
         <ul>

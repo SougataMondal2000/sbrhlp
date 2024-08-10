@@ -19,8 +19,10 @@ const Joinus = () => {
           Let&apos;s make life better...together.
         </p>
         <div className="flex justify-center gap-10 items-center">
-          <Button label={"Be a Partner"} boxShadow={"none"} />
           <Link href="/ngo-summit">
+            <Button label={"Be a Partner"} boxShadow={"none"} />
+          </Link>
+          <Link href="/internship/registration">
             <Button label={"Join Our Team"} boxShadow={"none"} />
           </Link>
         </div>

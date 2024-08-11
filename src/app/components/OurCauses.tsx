@@ -36,19 +36,21 @@ const CausePage: FC<CausePageProps> = ({
           <p>{description}</p>
           <p dangerouslySetInnerHTML={{ __html: content }}></p>
         </div>
-        {playlistUrl && (
-          <div className="flex justify-center mt-12">
-            <iframe
-              width="50%"
-              height="315"
-              src={`https://www.youtube.com/embed/videoseries?list=${playlistUrl}`}
-              frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="rounded-lg shadow-lg"
-            ></iframe>
-          </div>
-        )}
+        <div className="w-full flex justify-center">
+          {playlistUrl && (
+            <div className=" mt-12 lg:w-[50%] md:w-[70%] w-full">
+              <iframe
+                width="100%"
+                height="315"
+                src={`https://www.youtube.com/embed/videoseries?list=${playlistUrl}`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="rounded-lg shadow-lg"
+              ></iframe>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

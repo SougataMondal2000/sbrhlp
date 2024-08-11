@@ -6,6 +6,7 @@ import { baseURL } from "../baseurl";
 const DonationForm = () => {
   const [paymentSuccess, setPaymentSuccess] = useState(false);
   const [country, setCountry] = useState("India");
+  const [cause, setCause] = useState("India");
   const [donationAmount, setDonationAmount] = useState("0.00");
   const [formData, setFormData] = useState({
     firstName: "",
@@ -17,6 +18,7 @@ const DonationForm = () => {
     city: "",
     state: "",
     postalCode: "",
+    cause: "",
     donationAmount: "",
     // paymentMethod: "UPI",
   });
@@ -67,6 +69,7 @@ const DonationForm = () => {
               city: "",
               state: "",
               postalCode: "",
+              cause: "",
               donationAmount: "",
               // paymentMethod: "UPI",
             }),
@@ -218,7 +221,24 @@ const DonationForm = () => {
             </select>
           </div>
         </div>
-
+        <div className="mb-2">
+          <label htmlFor="donation" className="block text-sm font-medium mb-1">
+            Cause *
+          </label>
+          <select
+            value={cause}
+            onChange={(e) => setCause(e.target.value)}
+            className="w-full p-2 border rounded"
+          >
+            <option value="Elderly Care">Elderly Care</option>
+            <option value="Girl Child & Women welfare">
+              Girl Child & Women welfare
+            </option>
+            <option value="Mental Health Awareness">
+              Mental Health Awareness
+            </option>
+          </select>
+        </div>
         <div className="mb-4">
           <label htmlFor="donation" className="block text-sm font-medium mb-1">
             Donation Amount *

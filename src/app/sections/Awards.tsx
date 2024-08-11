@@ -1,6 +1,10 @@
+"use client";
+import Link from "next/link";
 import Button from "../components/Button";
+import { useRouter } from "next/navigation";
 
 const Awards = () => {
+  const router = useRouter();
   return (
     <div className="bg-[#F8F5F4] lg:h-[520px] md:h-[450px] flex items-center max-md:py-8">
       <div className="lg:w-[60%] md:w-[90%] w-[80%] mx-auto leading-6 flex flex-col md:flex-row justify-between items-center gap-4">
@@ -15,7 +19,14 @@ const Awards = () => {
             individuals and organizations, whose extraordinary dedication
             illuminates society&apos;s path towards a brighter future.
           </h2>
-          <Button label={"The Sociofare Awards"} boxShadow={"none"} />
+          <div className="flex justify-start items-center gap-4">
+            <div onClick={() => router.push("https://sociofare.com/lander")}>
+              <Button label={"Sociofare.com"} boxShadow={"none"} />
+            </div>
+            <Link href={"/award-nomination"}>
+              <Button label={"Award Nomination"} boxShadow={"none"} />
+            </Link>
+          </div>
         </div>
         <div className="md:w-[50%] mt-8 md:mt-0">
           <iframe

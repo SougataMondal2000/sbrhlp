@@ -106,3 +106,31 @@ export const members = [
         details: "Prerna's philanthropic activities were not only limited to providing money to different charities but also assisting the impoverished in their education while she was in her early twenties. She is a commerce graduate, seeking knowledge in International Business schemes in her master's with an emphasis on accounting who feels that financial freedom is essential."
     },
 ];
+
+export const interns = [
+    {
+        name: 'Intern 1',
+        image: '/intern1.jpeg', 
+       
+    },
+    {
+        name: 'Intern 2',
+        image: '/intern2.jpeg', 
+        
+    },
+    {
+        name: 'Intern 3',
+        image: '/intern3.jpeg', 
+        
+    },
+    {
+        name: 'Intern 4',
+        image: '/intern4.jpeg', 
+        
+    },
+    {
+        name: 'Intern 5',
+        image: '/intern5.jpeg', 
+        
+    },
+];

@@ -238,7 +238,7 @@ const NomineeForm: React.FC = () => {
       )}
 
       <label htmlFor="nomineesAchievements" className="block mb-2">
-        Nominee's Achievements:
+        Nominee&apos;s Achievements:
         <textarea
           id="nomineesAchievements"
           name="nomineesAchievements"
@@ -250,7 +250,7 @@ const NomineeForm: React.FC = () => {
       </label>
 
       <label htmlFor="nomineesMotivation" className="block mb-2">
-        Nominee's Motivation:
+        Nominee&apos;s Motivation:
         <textarea
           id="nomineesMotivation"
           name="nomineesMotivation"

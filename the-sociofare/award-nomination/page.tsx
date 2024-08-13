@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import axios from "axios";
-import { baseURL } from "../baseurl";
+import { baseURL } from "../../src/app/baseurl";
 
 interface SupportingDocumentation {
   lettersOfRecommendation: string[];

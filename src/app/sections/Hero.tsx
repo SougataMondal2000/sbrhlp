@@ -61,7 +61,7 @@ const Hero = () => {
               and global development.
             </h2>
             <div className="flex justify-center md:mb-20 mb-10">
-              <Link href={"/about-us"}>
+              <Link href={"/about"}>
                 <Button label={"Read More"} boxShadow={""} />
               </Link>
             </div>

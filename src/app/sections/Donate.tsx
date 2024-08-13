@@ -17,7 +17,7 @@ const Donate = () => {
           Your donation makes a difference.
         </p>
         <div className="flex justify-center gap-10 items-center">
-          <Link href="/donate">
+          <Link href="/donate-us">
             <Button label="Donate" boxShadow={"none"} />
           </Link>
         </div>

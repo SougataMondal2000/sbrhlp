@@ -142,19 +142,51 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({
             <label htmlFor="typeOfRegistration" className="block mb-2">
               Type of Registration
             </label>
-            <select
-              id="typeOfRegistration"
-              name="typeOfRegistration"
-              value={formData.typeOfRegistration}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border rounded"
-              required
-            >
-              <option value="">Select...</option>
-              <option value="Trust">Trust</option>
-              <option value="Society">Society</option>
-              <option value="Sec 8 company">Sec 8 company</option>
-            </select>
+            {!["Trust", "Society", "Sec 8 company"].includes(
+              formData.typeOfRegistration
+            ) ? (
+              <div className="flex gap-.5 items-center ">
+                <input
+                  type="text"
+                  id="typeOfRegistration"
+                  name="typeOfRegistration"
+                  value={formData.typeOfRegistration}
+                  onChange={handleChange}
+                  className="w-[70%] px-3 py-2 border rounded"
+                  placeholder="Please specify"
+                  required
+                />
+                <select
+                  id="typeOfRegistration"
+                  name="typeOfRegistration"
+                  value={formData.typeOfRegistration}
+                  onChange={handleChange}
+                  className="w-[30%] px-3 py-2 border rounded"
+                  required
+                >
+                  <option value="">Select...</option>
+                  <option value="Trust">Trust</option>
+                  <option value="Society">Society</option>
+                  <option value="Sec 8 company">Sec 8 company</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            ) : (
+              <select
+                id="typeOfRegistration"
+                name="typeOfRegistration"
+                value={formData.typeOfRegistration}
+                onChange={handleChange}
+                className="w-full px-3 py-2 border rounded"
+                required
+              >
+                <option value="">Select...</option>
+                <option value="Trust">Trust</option>
+                <option value="Society">Society</option>
+                <option value="Sec 8 company">Sec 8 company</option>
+                <option value="Other">Other</option>
+              </select>
+            )}
           </div>
           <div className="mb-4">
             <label htmlFor="email" className="block mb-2">

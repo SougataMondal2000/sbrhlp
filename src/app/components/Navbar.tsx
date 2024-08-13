@@ -141,7 +141,7 @@ const Navbar: React.FC = () => {
             ))}
           </ul>
         </div>
-        <Link href="/donate">
+        <Link href="/donate-us">
           <Button label="Donate Us!" boxShadow="none" />
         </Link>
         <button className="md:hidden ml-4" onClick={toggleMobileMenu}>

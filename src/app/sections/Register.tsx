@@ -15,7 +15,7 @@ const Register = () => {
       <div className="relative text-center text-white px-4 lg:w-[60%] md:w-[90%] w-[80%]">
         <p className="text-xl lg:text-4xl lg:mb-14 mb-8">Intern with us</p>
         <div className="flex justify-center gap-10 items-center">
-          <Link href="/internship/registration">
+          <Link href="/internship/registration-form">
             <Button label="Register" boxShadow={"none"} />
           </Link>
         </div>

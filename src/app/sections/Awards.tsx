@@ -23,7 +23,7 @@ const Awards = () => {
             <div onClick={() => router.push("https://sociofare.com/lander")}>
               <Button label={"Sociofare.com"} boxShadow={"none"} />
             </div>
-            <Link href={"/award-nomination"}>
+            <Link href={"/the-sociofare/award-nomination"}>
               <Button label={"Award Nomination"} boxShadow={"none"} />
             </Link>
           </div>

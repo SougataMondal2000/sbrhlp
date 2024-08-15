@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import axios from "axios";
-import { baseURL } from "../../src/app/baseurl";
+import { baseURL } from "@/app/baseurl";
 
 interface SupportingDocumentation {
   lettersOfRecommendation: string[];
@@ -54,7 +54,7 @@ interface NomineeFormData {
   };
 }
 
-const NomineeForm: React.FC = () => {
+const Page: React.FC = () => {
   const [formData, setFormData] = useState<NomineeFormData>({
     fullName: "",
     phoneNumber: "",
@@ -384,4 +384,4 @@ const NomineeForm: React.FC = () => {
   );
 };
 
-export default NomineeForm;
+export default Page;

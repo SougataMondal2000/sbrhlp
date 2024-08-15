@@ -2,15 +2,17 @@ import React from "react";
 
 interface TestimonialProps {
   name: string;
-  title: string;
   imageSrc: string;
+  title: string;
+  review: string;
   rating: number;
 }
 
 const Testimonial: React.FC<TestimonialProps> = ({
   name,
-  title,
+  review,
   imageSrc,
+  title,
   rating,
 }) => {
   return (
@@ -24,20 +26,15 @@ const Testimonial: React.FC<TestimonialProps> = ({
             alt={name}
           />
           <div className="ml-4">
-            <h2 className="text-xl font-bold">Best Style</h2>
+            <h2 className="text-xl font-bold">{title}</h2>
           </div>
         </div>
 
-        <p className="text-gray-700 text-sm mb-4">
-          Lorem ipsum beautiful dolor sit amet, consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore beautiful et dolore magna
-          aliqua.
-        </p>
+        <p className="text-gray-700 text-sm mb-4">{review}</p>
 
         <div className="flex items-center justify-between">
           <div>
             <p className="font-semibold">{name}</p>
-            <p className="text-gray-500 text-sm">{title}</p>
           </div>
           <div className="flex">
             {[...Array(5)].map((_, i) => (

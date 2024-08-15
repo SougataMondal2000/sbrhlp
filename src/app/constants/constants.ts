@@ -82,9 +82,10 @@ export const awards = [
 ];
 
 export const legislations = [
+    {  title: 'Registration approval for CSR activities', file: '/Registration_approval_for_CSR_activities.pdf', image: '/Registration_approval_for_CSR_activities.png' },
   { title: 'OA 80G(5)(vi) Of Income Tax Act, 1961', file: '/OA_80G(5)(vi)_Of_Income_Tax_Act_1961.pdf',image: '/OA_80G(5)_(vi)_Of_Income_Tax_Act_1961-1.png', },
   {  title: 'OR 12AA of Income Tax Act, 1961', file: '/OR_12AA_of_Income_Tax_Act_1961.pdf', image: '/OR_12AA_of_Income_Tax_Act_1961-1.png' },
-  {  title: 'Registration approval for CSR activities', file: '/Registration_approval_for_CSR_activities.pdf', image: '/Registration_approval_for_CSR_activities.png' },
+
 ];
 
 export const quickLinks = [{title:'About',redirectTo:'/about'},{title:'Awards & Recognition',redirectTo:'awards-and-recognition'},{title:'Publication',redirectTo:'/media-coverage'},{title:'Terms',redirectTo:'/terms-and-conditions'},{title:'Privacy',redirectTo:'/privacy-policy'},{title:'FAQs',redirectTo:'/frequently-asked-questions'},]

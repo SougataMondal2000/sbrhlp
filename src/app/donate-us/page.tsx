@@ -2,9 +2,11 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { baseURL } from "../baseurl";
+import toast, { Toaster } from "react-hot-toast";
 
 const DonationForm = () => {
   const [paymentSuccess, setPaymentSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [country, setCountry] = useState("India");
   const [cause, setCause] = useState("India");
   const [donationAmount, setDonationAmount] = useState("0.00");
@@ -34,6 +36,7 @@ const DonationForm = () => {
   };
 
   const displayRazorpay = async (): Promise<void> => {
+    setLoading(true);
     try {
       const scriptLoaded = await loadScript(
         "https://checkout.razorpay.com/v1/checkout.js"
@@ -52,13 +55,13 @@ const DonationForm = () => {
         handler: async (response: { razorpay_payment_id: string }) => {
           setPaymentSuccess(true);
           console.log(response.razorpay_payment_id);
-
-          // Send donation details to the backend
           try {
             await axios.post(`${baseURL}/donate`, {
               ...formData,
               donationAmount: donationAmount,
             });
+            setLoading(false);
+            toast.success("Thanks for donating!");
             setFormData({
               firstName: "",
               lastName: "",
@@ -96,7 +99,8 @@ const DonationForm = () => {
     if (Number(donationAmount) >= 100) {
       await displayRazorpay();
     } else {
-      alert("Donation amount must be equal to or more than 10!");
+      toast.error("Donation amount must be equal to or more than 100!");
+      // alert("Donation amount must be equal to or more than 100!");
     }
     if (paymentSuccess) {
       console.log("Payment Confirmed!");
@@ -263,6 +267,7 @@ const DonationForm = () => {
           Submit
         </button>
       </div>
+      <Toaster position="bottom-left" reverseOrder={false} />
     </main>
   );
 };

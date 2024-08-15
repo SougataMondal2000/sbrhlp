@@ -142,7 +142,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({
             <label htmlFor="typeOfRegistration" className="block mb-2">
               Type of Registration
             </label>
-            {!["Trust", "Society", "Sec 8 company"].includes(
+            {!["Trust", "Society", "Sec 8 Company"].includes(
               formData.typeOfRegistration
             ) ? (
               <div className="flex gap-.5 items-center ">
@@ -183,7 +183,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({
                 <option value="">Select...</option>
                 <option value="Trust">Trust</option>
                 <option value="Society">Society</option>
-                <option value="Sec 8 company">Sec 8 company</option>
+                <option value="Sec 8 company">Sec 8 Company</option>
                 <option value="Other">Other</option>
               </select>
             )}

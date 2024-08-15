@@ -4,6 +4,7 @@ import Donate from "../sections/Donate";
 import Joinus from "../sections/Joinus";
 import { awards } from "../constants/constants";
 import Register from "../sections/Register";
+import AwardsCarousel from "../components/AwardsCarousel";
 
 const Page: React.FC = () => {
   return (
@@ -40,56 +41,7 @@ const Page: React.FC = () => {
             />
           </div>
         </div>
-        <div className="relative md:mt-10 mt-4">
-          <div className="flex space-x-6 md:justify-center overflow-x-auto pb-8">
-            {awards.map((award: any, index) => (
-              <div key={index} className="flex-none w-72">
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                  <img
-                    src={award.image}
-                    alt={award.title}
-                    className="w-full h-96 object-cover p-4"
-                  />
-                </div>
-                <div className="mt-8 text-center">
-                  <div className="w-3 h-3 border-2 border-orange-500 rounded-full mx-auto mb-2"></div>
-                  <p className="font-bold">{award.date}</p>
-                  <p className="text-gray-600">{award.title}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          {/* <button className="absolute left-0 bottom-10 transform -translate-y-1/2 rounded-full p-2">
-            <svg
-              className="w-6 h-6 text-orange-500"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={4}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-          <button className="absolute right-0  bottom-10 transform -translate-y-1/2  rounded-full p-2">
-            <svg
-              className="w-6 h-6 text-orange-500"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={4}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button> */}
-        </div>
+        <AwardsCarousel awards={awards} />
       </div>
 
       <Joinus />

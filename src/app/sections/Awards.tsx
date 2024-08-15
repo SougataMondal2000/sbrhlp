@@ -32,11 +32,11 @@ const Awards = () => {
           <iframe
             width="100%"
             height="315"
-            src="https://www.youtube.com/embed/V616o-YsA8g"
-            title="YouTube video player"
+            src={`https://www.youtube.com/embed/videoseries?list=${`PLnaPjVv1wEfnmipSVcdke9HAI_af-4hsH`}`}
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            className="shadow-lg"
           ></iframe>
         </div>
       </div>

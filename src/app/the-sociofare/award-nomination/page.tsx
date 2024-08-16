@@ -224,7 +224,7 @@ const Page: React.FC = () => {
 
       <div className="mt-4">
         <label htmlFor="nomineesAchievements" className="block mb-2">
-          Nominee's Achievements:
+          Nominee&apos;s Achievements:
           <textarea
             id="nomineesAchievements"
             name="nomineesAchievements"
@@ -239,7 +239,7 @@ const Page: React.FC = () => {
 
       <div className="mt-4">
         <label htmlFor="nomineesMotivation" className="block mb-2">
-          Nominee's Motivation:
+          Nominee&apos;s Motivation:
           <textarea
             id="nomineesMotivation"
             name="nomineesMotivation"

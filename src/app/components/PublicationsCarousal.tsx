@@ -29,25 +29,27 @@ const PublicationsCarousel: React.FC<PublicationsCarouselProps> = ({
     setCurrentPage((prevPage) => (prevPage - 1 + totalPages) % totalPages);
   }, [totalPages]);
 
-  const handleViewAll = () => {
-    setViewAll(true);
-  };
-
-  const handleBackToCarousel = () => {
-    setViewAll(false);
-  };
+  const handleViewAll = () => setViewAll(true);
+  const handleBackToCarousel = () => setViewAll(false);
 
   const renderPublication = (publication: Publication, index: number) => (
-    <div key={index} className={`${viewAll ? "w-1/3 p-2" : "w-1/3 px-2"}`}>
-      <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full">
+    <div
+      key={index}
+      className={`${
+        viewAll ? "w-full sm:w-1/2 lg:w-1/3 p-4" : "w-full md:w-1/3 px-4"
+      }`}
+    >
+      <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full transition-all duration-300 transform hover:scale-105">
         <img
           src={publication.image}
           alt={publication.title}
-          className="w-full h-3/4 object-cover"
+          className="w-full h-64 object-cover"
         />
-        <div className="p-4">
-          <div className="w-3 h-3 border-2 border-orange-500 rounded-full mx-auto mb-2"></div>
-          <p className="font-bold text-center">{publication.date}</p>
+        <div className="p-6">
+          <div className="w-3 h-3 border-2 border-[#FF7536] rounded-full mx-auto mb-4"></div>
+          <p className="font-bold text-center text-lg mb-2">
+            {publication.date}
+          </p>
           <p className="text-gray-600 text-center">{publication.title}</p>
         </div>
       </div>
@@ -60,12 +62,10 @@ const PublicationsCarousel: React.FC<PublicationsCarouselProps> = ({
     return publications.slice(start, end).map(renderPublication);
   };
 
-  const renderAllView = () => {
-    return publications.map(renderPublication);
-  };
+  const renderAllView = () => publications.map(renderPublication);
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto overflow-hidden">
+    <div className="relative w-full max-w-7xl mx-auto overflow-hidden py-12">
       <div
         className={`flex ${
           viewAll ? "flex-wrap" : "justify-between"
@@ -77,34 +77,25 @@ const PublicationsCarousel: React.FC<PublicationsCarouselProps> = ({
         <>
           <button
             onClick={prevPage}
-            className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md focus:outline-none z-30"
+            className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-md focus:outline-none z-30 transition-all duration-300 hover:bg-[#FF7536] hover:text-white"
           >
-            <MdNavigateBefore />
+            <MdNavigateBefore className="text-2xl" />
           </button>
           <button
             onClick={nextPage}
-            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md focus:outline-none z-30"
+            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-md focus:outline-none z-30 transition-all duration-300 hover:bg-[#FF7536] hover:text-white"
           >
-            <MdNavigateNext />
+            <MdNavigateNext className="text-2xl" />
           </button>
         </>
       )}
-      <div className="text-center mt-4">
-        {viewAll ? (
-          <button
-            onClick={handleBackToCarousel}
-            className="bg-[#FF7536] text-white px-4 py-2 rounded-md  focus:outline-none"
-          >
-            Back to Carousel
-          </button>
-        ) : (
-          <button
-            onClick={handleViewAll}
-            className="bg-[#FF7536] text-white px-4 py-2 rounded-md  focus:outline-none"
-          >
-            View All
-          </button>
-        )}
+      <div className="text-center mt-12">
+        <button
+          onClick={viewAll ? handleBackToCarousel : handleViewAll}
+          className="bg-[#FF7536] text-white px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#FF7536] focus:ring-opacity-50"
+        >
+          {viewAll ? "Back to Carousel" : "View All Publications"}
+        </button>
       </div>
     </div>
   );
